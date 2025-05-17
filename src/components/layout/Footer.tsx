@@ -29,23 +29,26 @@ function Footer() {
 
   return (
     <>
-      <footer className="bg-secondary shadow h-16 py-4 flex flex-col items-center">
+      <footer className="bg-secondary shadow h-64 py-4 flex flex-col items-center">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex space-x-3">
             <span className="whitespace-nowrap">Based in Bangkok</span>
             <MoveRight className="h-5 w-5 text-foreground" />
             <span className="whitespace-nowrap">{formatTime(currentTime)}</span>
           </div>
-          <div className="container mx-auto text-center mt-2">
-            © {new Date().getFullYear()} TK.
-          </div>
           <Button
             onClick={scrollToTop}
             variant="ghost"
-            className="p-2 hover:bg-gray-100 rounded-md"
+            className="p-2 hover:bg-gray-100 rounded-md cursor-pointer"
           >
             <ArrowUp className="h-5 w-5 text-foreground" />
           </Button>
+        </div>
+        <div className="flex">
+          <div></div>
+        </div>
+        <div className="container mx-auto text-center mt-2">
+          © {new Date().getFullYear()} TK.
         </div>
       </footer>
     </>

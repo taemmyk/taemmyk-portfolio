@@ -1,6 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { Github, FileUser, Linkedin, MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function Layout() {
   const location = useLocation();
@@ -45,6 +51,9 @@ function Layout() {
           </ul>
           <ul className="flex items-center space-x-6 list-none p-0">
             <li>
+              <p className="text-muted-foreground font-bold">Open for Work!</p>
+            </li>
+            <li>
               <Button
                 asChild
                 variant="ghost"
@@ -60,19 +69,28 @@ function Layout() {
               </Button>
             </li>
             <li>
-              <Button
-                asChild
-                variant="ghost"
-                className="p-2 hover:bg-gray-100 rounded-md"
-              >
-                <Link
-                  to="https://drive.google.com/file/d/1g5TS1E_kBE_sRmUgTwdZ4LhWA1uyigd5/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FileUser className="h-5 w-5 text-foreground" />
-                </Link>
-              </Button>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Button
+                      asChild
+                      variant="ghost"
+                      className="p-2 hover:bg-gray-100 rounded-md"
+                    >
+                      <Link
+                        to="https://drive.google.com/file/d/1g5TS1E_kBE_sRmUgTwdZ4LhWA1uyigd5/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FileUser className="h-5 w-5 text-foreground" />
+                      </Link>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p className="text-md">My Resume</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </li>
             <li>
               <Button
