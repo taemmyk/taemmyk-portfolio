@@ -11,7 +11,7 @@ function Scribbly() {
         className="flex flex-col lg:flex-row relative overflow-visible"
       >
         <div
-          className="w-full lg:w-[62.5%] bg-gradient-to-r from-background to-rose-200 
+          className="w-full lg:w-[62.5%] bg-gradient-to-r from-background to-rose-200
                flex flex-col justify-around z-5 p-4"
           style={{
             minHeight: `calc(100vh - 128px)`,
@@ -57,7 +57,6 @@ function Scribbly() {
           </div>
         </div>
 
-        {/* รูปด้านขวา */}
         <img
           src={scribblyGifImage}
           alt="Scribbly Welcome"
