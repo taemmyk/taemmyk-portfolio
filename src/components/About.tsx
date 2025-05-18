@@ -13,36 +13,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-interface StyledButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  className?: string;
-  showArrow?: boolean;
-}
-
-const StyledButton: React.FC<StyledButtonProps> = ({
-  children,
-  onClick,
-  className,
-  showArrow = false,
-}) => {
-  return (
-    <button
-      onClick={onClick}
-      className={`relative overflow-hidden transition-all duration-300 group w-fit px-4 py-2 bg-secondary rounded-md border border-background flex items-center gap-x-2 whitespace-nowrap ${className}`}
-    >
-      <div className="absolute inset-0 bg-muted z-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
-      {showArrow && <MoveRight className="relative z-5" />}{" "}
-      <span className="relative z-5 font-semibold">{children}</span>
-    </button>
-  );
-};
+import StyledTag from "./common/StyledTag";
 
 function About() {
-  const openCredential = (url: string) => {
-    window.open(url, "_blank");
-  };
   return (
     <>
       <div
@@ -50,12 +23,13 @@ function About() {
         className="flex flex-col justify-center"
       >
         <h1 className="font-atma text-6xl font-bold">
-          Hello again, Tammy<span  className="text-2xl align-super">*</span> is here.
+          Hello again, Tammy<span className="text-2xl align-super">*</span> is
+          here.
         </h1>
         <p className="pt-4 text-sm italic">
-          * My real name is <b>Thanutchaporn Kham-Iam</b>, but Tammy’s
-          been my go-to for so long, even I do a double-take when someone calls
-          me by the full one.
+          * My real name is <b>Thanutchaporn Kham-Iam</b>, but Tammy’s been my
+          go-to for so long, even I do a double-take when someone calls me by
+          the full one.
         </p>
         <p className="pt-4 text-xl">
           A curious technologist with a love for{" "}
@@ -86,71 +60,63 @@ function About() {
         <div className="w-full lg:w-[40%] flex flex-col gap-y-4">
           <h4 className="font-atma text-xl">Career Targets</h4>
           <div className="flex flex-wrap gap-2">
-            <StyledButton>Full-Stack Developer</StyledButton>
-            <StyledButton>Backend Developer</StyledButton>
+            <StyledTag>Full-Stack Developer</StyledTag>
+            <StyledTag>Backend Developer</StyledTag>
           </div>
           <h4 className="font-atma text-xl pt-4">Domains of Interest</h4>
           <div className="flex flex-wrap gap-2">
-            <StyledButton>EdTech</StyledButton>
-            <StyledButton>Game</StyledButton>
-            <StyledButton>Entertainment</StyledButton>
-            <StyledButton>Security</StyledButton>
-            <StyledButton>Retail</StyledButton>
-            <StyledButton>Non-Profit Organisation</StyledButton>
+            <StyledTag>EdTech</StyledTag>
+            <StyledTag>Game</StyledTag>
+            <StyledTag>Entertainment</StyledTag>
+            <StyledTag>Security</StyledTag>
+            <StyledTag>Retail</StyledTag>
+            <StyledTag>Non-Profit Organisation</StyledTag>
           </div>
           <h4 className="font-atma text-xl pt-4">Technical Skills</h4>
           <div className="flex flex-wrap gap-2">
-            <StyledButton>JavaScript</StyledButton>
-            <StyledButton>Python</StyledButton>
-            <StyledButton>C#</StyledButton>
-            <StyledButton>React</StyledButton>
+            <StyledTag>JavaScript</StyledTag>
+            <StyledTag>Python</StyledTag>
+            <StyledTag>C#</StyledTag>
+            <StyledTag>React</StyledTag>
           </div>
           <h4 className="font-atma text-xl pt-4">Technologies</h4>
           <div className="flex flex-wrap gap-2">
-            <StyledButton>SQL</StyledButton>
-            <StyledButton>MongoDB</StyledButton>
-            <StyledButton>Docker</StyledButton>
+            <StyledTag>SQL</StyledTag>
+            <StyledTag>MongoDB</StyledTag>
+            <StyledTag>Docker</StyledTag>
           </div>
           <h4 className="font-atma text-xl pt-4">Languages</h4>
           <div className="flex flex-wrap gap-2">
-            <StyledButton>Thai (Native)</StyledButton>
-            <StyledButton>English (Intermediate) </StyledButton>
+            <StyledTag>Thai (Native)</StyledTag>
+            <StyledTag>English (Intermediate) </StyledTag>
           </div>
           <h4 className="font-atma text-xl pt-4">Certifications</h4>
           <div className="flex-col space-y-2">
-            <StyledButton
-              onClick={() =>
-                openCredential(
-                  "https://codeinplace.stanford.edu/cip3/certificate/dgpazp"
-                )
-              }
+            <StyledTag
+              url={"https://codeinplace.stanford.edu/cip3/certificate/dgpazp"}
               showArrow={true}
               className="cursor-pointer"
             >
               Stanford University: Code in Place
-            </StyledButton>
-            <StyledButton
-              onClick={() =>
-                openCredential(
-                  "https://www.credly.com/badges/e972a0f3-80ea-4e7d-9038-c5731cda5f53"
-                )
+            </StyledTag>
+            <StyledTag
+              url={
+                "https://www.credly.com/badges/e972a0f3-80ea-4e7d-9038-c5731cda5f53"
               }
               showArrow={true}
               className="cursor-pointer"
             >
               Unity Certified Associate: Game Developer (Expired)
-            </StyledButton>
-            <StyledButton
-              onClick={() =>
-                openCredential(
-                  "https://www.credly.com/badges/5d6a068a-9b3f-4528-b5ec-a00413686d06"
-                )
+            </StyledTag>
+            <StyledTag
+              url={
+                "https://www.credly.com/badges/5d6a068a-9b3f-4528-b5ec-a00413686d06"
               }
               showArrow={true}
               className="cursor-pointer"
             >
               Unity Certified Associate: Programmer (Expired)
-            </StyledButton>
+            </StyledTag>
           </div>
         </div>
         <div className="w-full lg:w-[60%]">
@@ -175,11 +141,11 @@ function About() {
               <p className="mt-4 font-bold">Activities and Societies</p>
               <ul className="list-disc list-inside ml-4 space-y-1">
                 <li>
-                  12th ACM SIGGRAPH Conference and Exhibition student volunteer
+                  12th ACM SIGGRAPH Conference and Exhibition Student Volunteer
                 </li>
                 <li>
                   14th International Conference on Tangible, Embedded, and
-                  Embodied Interaction student volunteer
+                  Embodied Interaction Student Volunteer
                 </li>
                 <li>QUT Languages Student Representative</li>
                 <li>QUT Thai Student Club Representative</li>
