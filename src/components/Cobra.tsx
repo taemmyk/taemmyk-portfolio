@@ -1,53 +1,74 @@
 import StyledTag from "./common/StyledTag";
+import cobraLayoutImage from "../assets/cobra-vertical.png";
 
 function Cobra() {
   return (
     <>
       <div
         style={{ minHeight: `calc(100vh - 64px - 64px)` }}
-        className="flex flex-col justify-around"
+        className="flex flex-col lg:flex-row overflow-x-visible"
       >
-        <div className="items-center">
-          <h1 className="font-atma text-6xl font-bold">
-            E-Commerce Game Store Project
-          </h1>
-          <div className="pt-18 space-x-2 max-w-3xl">
-            <p className="pb-4">
-              This was our final project for a full-time bootcamp — a team of
-              five curious (and slightly chaotic) learning-to-be developers, all
-              new to MERN stack, building a full-stack e-commerce platform for
-              digital games. No formal roles but I naturally took the lead:
-              coordinating tasks, pushing progress, and keeping the repo
-              organised (yes, I was that person approving pull requests and
-              wrestling with merge conflicts at midnight). It was chaotic. It
-              was challenging. And it was the most fun I’ve had building
-              something from scratch.
-            </p>
-            <p>
-              With previous experience as a UX/UI intern, I designed the user
-              interface myself, focusing on a smooth, game-inspired experience.
-              While we didn’t have a formal “design system” I tried to guide the
-              visual direction and gave feedback throughout. Leading wasn’t
-              perfect — there were definitely moments where I dropped the ball
-              on code consistency or rushed a review — but I learned a lot about
-              balancing vision with teamwork.
-            </p>
+        <div className="bg-gradient-to-r from-background to-teal-800 flex flex-col justify-around p-4 w-full lg:w-2/3">
+          <div className="items-center">
+            <h1 className="font-atma text-6xl font-bold">
+              E-Commerce Game Store Project
+            </h1>
+            <div className="pt-18 space-x-2 max-w-3xl">
+              <p className="pb-4">
+                This was our final project for a full-time bootcamp — a team of
+                five curious (and slightly chaotic) learning-to-be developers,
+                all new to MERN stack, building a full-stack e-commerce platform
+                for digital games. No formal roles but I naturally took the
+                lead: coordinating tasks, pushing progress, and keeping the repo
+                organised (yes, I was that person approving pull requests and
+                wrestling with merge conflicts at midnight). It was chaotic. It
+                was challenging. And it was the most fun I’ve had building
+                something from scratch.
+              </p>
+              <p>
+                With previous experience as a UX/UI intern, I designed the user
+                interface myself, focusing on a smooth, game-inspired
+                experience. While we didn’t have a formal “design system” I
+                tried to guide the visual direction and gave feedback
+                throughout. Leading wasn’t perfect — there were definitely
+                moments where I dropped the ball on code consistency or rushed a
+                review — but I learned a lot about balancing vision with
+                teamwork.
+              </p>
+            </div>
+          </div>
+          <div className="flex-col space-y-2">
+            <StyledTag
+              showArrow={true}
+              url="https://jsd9-spicy-cobra-frontend.vercel.app/"
+            >
+              Game time? Let's play!
+            </StyledTag>
+            <div className="flex space-x-2">
+              <StyledTag hasBgAnimation={false}>MongoDB</StyledTag>
+              <StyledTag hasBgAnimation={false}>Express</StyledTag>
+              <StyledTag hasBgAnimation={false}>React</StyledTag>
+              <StyledTag hasBgAnimation={false}>Node</StyledTag>
+              <StyledTag hasBgAnimation={false}>MUI</StyledTag>
+            </div>
           </div>
         </div>
-        <div className="flex-col space-y-2">
-          <StyledTag showArrow={true} url="https://jsd9-spicy-cobra-frontend.vercel.app/">
-            Game time? Let's play!
-          </StyledTag>
-          <div className="flex space-x-2">
-            <StyledTag hasBgAnimation={false}>MongoDB</StyledTag>
-            <StyledTag hasBgAnimation={false}>Express</StyledTag>
-            <StyledTag hasBgAnimation={false}>React</StyledTag>
-            <StyledTag hasBgAnimation={false}>Node</StyledTag>
-            <StyledTag hasBgAnimation={false}>MUI</StyledTag>
-          </div>
+        <div className="relative w-1/3 bg-teal-800">
+          <img
+            src={cobraLayoutImage}
+            alt="Cobra layout"
+            className="hidden 2xl:block absolute object-cover z-0 pointer-events-none"
+            style={{
+              top: "2%",
+              right: "-35%",
+              height: "95%",
+              width: "auto",
+              maxWidth: "none",
+            }}
+          />
         </div>
       </div>
-      <div className="flex flex-col gap-y-10">
+      <div className="flex flex-col gap-y-10 mt-16">
         <div className="flex">
           <div className="w-[30%]">
             <p className="font-atma text-3xl">What I Did</p>
