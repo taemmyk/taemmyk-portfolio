@@ -15,7 +15,7 @@ function Home() {
         style={{ minHeight: `calc(100vh - 64px - 64px)` }}
         className="flex flex-col justify-center"
       >
-        <h1 className="text-6xl font-bold font-sans">Hello, this is Tammy.</h1>
+        <h1 className="font-atma text-6xl font-bold">Hello, this is Tammy.</h1>
         <div className="pt-18 space-x-2">
           <span className="text-3xl pt-8">Currently</span>
           <MoveRight className="inline" />

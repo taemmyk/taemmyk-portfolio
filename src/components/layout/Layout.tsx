@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 function Layout() {
   return (
-    <div className="font-sans font-semibold">
+    <div className="font-semibold">
       <Header />
       <main
         className="container mx-auto py-8 px-6 mt-16"

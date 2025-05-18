@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', ...require('tailwindcss/defaultTheme').fontFamily.sans],
+        montserrat: ["Montserrat", "sans-serif"],
+        atma: ["Atma", "sans-serif"],
       },
       colors: {
         background: "hsl(var(--background))",

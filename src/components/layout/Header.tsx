@@ -19,7 +19,7 @@ function Layout() {
             <li className="mr-8">
               <Link
                 to="/"
-                className="text-xl font-black text-foreground hover:text-shadow-lg"
+                className="font-atma text-xl font-black text-foreground hover:text-shadow-lg"
               >
                 TK
               </Link>
