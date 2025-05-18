@@ -1,14 +1,6 @@
 import { MoveRight } from "lucide-react";
 import { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { useLocation } from "react-router-dom";
 import scribblyGifImage from "../assets/scribbly-welcome.gif";
 import ProjectCard from "./common/ProjectCard";
 
