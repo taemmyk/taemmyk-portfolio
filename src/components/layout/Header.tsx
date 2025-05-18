@@ -50,7 +50,7 @@ function Layout() {
             </li>
           </ul>
           <ul className="flex items-center space-x-6 list-none p-0">
-            <li>
+            <li className="hidden md:block">
               <p className="text-muted-foreground font-bold">Open for Work!</p>
             </li>
             <li>
