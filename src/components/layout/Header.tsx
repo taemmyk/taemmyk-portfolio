@@ -26,7 +26,7 @@ function Layout() {
             </li>
             <li>
               <Button asChild variant="ghost">
-                <Link to="/#work-section">
+                <Link to="/#work">
                   <span>Work</span>
                 </Link>
               </Button>
