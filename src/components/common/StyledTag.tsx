@@ -35,7 +35,7 @@ const StyledTag: React.FC<StyledTagProps> = ({
         className={`relative overflow-hidden transition-all duration-300 group w-fit px-4 py-2 bg-secondary text-accent-foreground rounded-md border border-background flex items-center gap-x-2 whitespace-nowrap ${className}`}
       >
         {hasBgAnimation && (
-          <div className="absolute inset-0 bg-sidebar-accent z-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+          <div className="absolute inset-0 bg-muted z-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
         )}
         {showArrow && <MoveRight className="relative z-5" />}
         <span className="relative z-5 font-semibold">{children}</span>
@@ -49,7 +49,7 @@ const StyledTag: React.FC<StyledTagProps> = ({
       className={`relative overflow-hidden transition-all duration-300 group w-fit px-4 py-2 bg-secondary text-accent-foreground rounded-md border border-background flex items-center gap-x-2 whitespace-nowrap ${className}`}
     >
       {hasBgAnimation && (
-        <div className="absolute inset-0 bg-sidebar-accent z-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
+        <div className="absolute inset-0 bg-muted z-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
       )}
       {showArrow && <MoveRight className="relative z-5" />}
       <span className="relative z-5 font-semibold">{children}</span>

@@ -31,21 +31,23 @@ function Footer() {
     <>
       <footer className="bg-secondary shadow h-16 py-4 flex flex-col items-center">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 w-1/3">
             <span className="whitespace-nowrap">Based in Bangkok</span>
             <MoveRight className="h-5 w-5 text-foreground" />
             <span className="whitespace-nowrap">{formatTime(currentTime)}</span>
           </div>
-          <div className="container mx-auto text-center mt-2">
-            © {new Date().getFullYear()} TK.
+          <div className="container mx-auto w-1/3 text-center mt-2">
+            © {new Date().getFullYear()} TK. | All Rights Reserved.
           </div>
-          <Button
-            onClick={scrollToTop}
-            variant="ghost"
-            className="p-2 hover:bg-gray-100 rounded-md cursor-pointer"
-          >
-            <ArrowUp className="h-5 w-5 text-foreground" />
-          </Button>
+          <div className="w-1/3 flex justify-end">
+            <Button
+              onClick={scrollToTop}
+              variant="ghost"
+              className="p-2 rounded-md group cursor-pointer"
+            >
+              <ArrowUp className="h-5 w-5 text-foreground group-hover:text-primary-foreground transition-colors" />
+            </Button>
+          </div>
         </div>
       </footer>
     </>

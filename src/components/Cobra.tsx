@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import StyledTag from "./common/StyledTag";
 import cobraLayoutImage from "../assets/cobra-vertical.png";
 
 function Cobra() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <div

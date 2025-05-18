@@ -19,20 +19,28 @@ function Layout() {
             <li className="mr-8">
               <Link
                 to="/"
-                className="font-atma text-xl font-black text-foreground hover:text-shadow-lg"
+                className="font-atma text-xl font-black text-foreground hover:text-muted-foreground hover:text-shadow-lg"
               >
                 TK
               </Link>
             </li>
             <li>
-              <Button asChild variant="ghost">
+              <Button
+                asChild
+                variant="ghost"
+                className="hover:text-primary-foreground"
+              >
                 <Link to="/#work">
                   <span>Work</span>
                 </Link>
               </Button>
             </li>
             <li>
-              <Button asChild variant="ghost">
+              <Button
+                asChild
+                variant="ghost"
+                className="hover:text-primary-foreground"
+              >
                 <Link
                   to="/about"
                   className={`flex items-center w-full ${
@@ -54,17 +62,13 @@ function Layout() {
               <p className="text-muted-foreground font-bold">Open for Work!</p>
             </li>
             <li>
-              <Button
-                asChild
-                variant="ghost"
-                className="p-2 hover:bg-gray-100 rounded-md"
-              >
+              <Button asChild variant="ghost" className="p-2 rounded-md group">
                 <Link
                   to="https://github.com/taemmyk/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Github className="h-5 w-5 text-foreground" />
+                  <Github className="h-5 w-5 text-foreground group-hover:text-primary-foreground transition-colors" />
                 </Link>
               </Button>
             </li>
@@ -75,14 +79,14 @@ function Layout() {
                     <Button
                       asChild
                       variant="ghost"
-                      className="p-2 hover:bg-gray-100 rounded-md"
+                      className="p-2 rounded-md group"
                     >
                       <Link
                         to="https://drive.google.com/file/d/1g5TS1E_kBE_sRmUgTwdZ4LhWA1uyigd5/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FileUser className="h-5 w-5 text-foreground" />
+                        <FileUser className="h-5 w-5 text-foreground group-hover:text-primary-foreground transition-colors" />
                       </Link>
                     </Button>
                   </TooltipTrigger>
@@ -93,17 +97,13 @@ function Layout() {
               </TooltipProvider>
             </li>
             <li>
-              <Button
-                asChild
-                variant="ghost"
-                className="p-2 hover:bg-gray-100 rounded-md"
-              >
+              <Button asChild variant="ghost" className="p-2 rounded-md group">
                 <Link
                   to="https://www.linkedin.com/in/t-khamiam/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Linkedin className="h-5 w-5 text-foreground" />
+                  <Linkedin className="h-5 w-5 text-foreground group-hover:text-primary-foreground transition-colors" />
                 </Link>
               </Button>
             </li>

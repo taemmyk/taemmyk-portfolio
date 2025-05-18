@@ -16,6 +16,8 @@ function Home() {
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [location]);
 
