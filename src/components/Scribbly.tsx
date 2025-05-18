@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import StyledTag from "./common/StyledTag";
 import scribblyGifImage from "../assets/scribbly-welcome.gif";
 
 function Scribbly() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <div

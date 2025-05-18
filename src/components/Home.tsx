@@ -1,6 +1,16 @@
 import { MoveRight } from "lucide-react";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import scribblyGifImage from "../assets/scribbly-welcome.gif";
+import ProjectCard from "./common/ProjectCard";
 
 function Home() {
   const location = useLocation();
@@ -48,6 +58,22 @@ function Home() {
       </div>
       <div id="work" className="mt-8">
         <h2 className="text-4xl font-bold font-atma">Work</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 pt-8 px-2 md:px-8">
+          <ProjectCard
+            title="Scribbly"
+            description="Note-taking App"
+            imageSrc={scribblyGifImage}
+            imageAlt="Scribbly"
+            linkTo="/work/scribbly"
+          >
+            <p className="pt-4 text-muted-foreground text-justify">
+              A rose-themed note app built with MERN, solo-style. It started as
+              a backend sandbox and turned into a fully working app with auth,
+              tags, and way too much bubblegum energy. Switched from SQL to
+              MongoDB mid-build, just for the plot.
+            </p>
+          </ProjectCard>
+        </div>
       </div>
     </>
   );
