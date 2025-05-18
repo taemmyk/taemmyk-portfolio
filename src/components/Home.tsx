@@ -18,7 +18,7 @@ function Home() {
     <>
       <div
         style={{ minHeight: `calc(100vh - 64px - 64px)` }}
-        className="flex flex-col justify-center"
+        className="bg-gradient-to-r from-background to-chart-3 flex flex-col justify-center"
       >
         <h1 className="font-atma text-6xl font-bold">
           Hello, this is Tammy<span className="text-2xl align-super">*</span>.

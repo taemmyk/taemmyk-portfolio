@@ -8,7 +8,7 @@ function Cobra() {
         style={{ minHeight: `calc(100vh - 64px - 64px)` }}
         className="flex flex-col lg:flex-row overflow-x-visible"
       >
-        <div className="bg-gradient-to-r from-background to-teal-800 flex flex-col justify-around p-4 w-full lg:w-2/3">
+        <div className="bg-gradient-to-r from-background to-chart-5 flex flex-col justify-around p-4 w-full lg:w-2/3">
           <div className="items-center">
             <h1 className="font-atma text-6xl font-bold">
               E-Commerce Game Store Project
@@ -53,7 +53,7 @@ function Cobra() {
             </div>
           </div>
         </div>
-        <div className="relative w-1/3 bg-teal-800">
+        <div className="relative w-1/3 bg-chart-5">
           <img
             src={cobraLayoutImage}
             alt="Cobra layout"

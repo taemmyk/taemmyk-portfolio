@@ -20,7 +20,7 @@ function About() {
     <>
       <div
         style={{ minHeight: `calc(100vh - 64px - 64px)` }}
-        className="flex flex-col justify-center"
+        className="bg-gradient-to-r from-background to-chart-2 flex flex-col justify-center"
       >
         <h1 className="font-atma text-6xl font-bold">
           Hello again, Tammy<span className="text-2xl align-super">*</span> is
@@ -56,7 +56,7 @@ function About() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-y-10 lg:gap-x-10 lg:flex-row">
+      <div className="flex flex-col gap-y-10 lg:gap-x-10 lg:flex-row pt-16">
         <div className="w-full lg:w-[40%] flex flex-col gap-y-4">
           <h4 className="font-atma text-xl">Career Targets</h4>
           <div className="flex flex-wrap gap-2">
