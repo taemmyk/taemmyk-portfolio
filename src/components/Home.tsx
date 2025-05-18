@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import cobraGifImage from "../assets/cobra-index.gif";
 import scribblyGifImage from "../assets/scribbly-welcome.gif";
+import colmarImage from "../assets/colmar-layout-preview.png";
+import reactAsImage from "../assets/react-assessment-preview.png";
 import ProjectCard from "./common/ProjectCard";
 
 function Home() {
@@ -51,7 +53,7 @@ function Home() {
       </div>
       <div id="work" className="mt-8">
         <h2 className="text-4xl font-bold font-atma">Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 pt-8 px-2 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-4 pt-8 px-2 md:px-8 items-stretch">
           <ProjectCard
             title="Cobra Game"
             description="E-Commerce App"
@@ -60,7 +62,10 @@ function Home() {
             linkTo="/work/cobra"
           >
             <p className="pt-4 text-muted-foreground text-justify">
-              Bootcamp capstone with a 5-person crew, all new to MERN. I kinda became the unofficial lead — ran the repo, built major backend routes, wrangled pull requests, and kept the chaos (mostly) organised.
+              Bootcamp capstone with a 5-person crew, all new to MERN. I kinda
+              became the unofficial lead — ran the repo, built major backend
+              routes, wrangled pull requests, and kept the chaos (mostly)
+              organised.
             </p>
           </ProjectCard>
           <ProjectCard
@@ -75,6 +80,33 @@ function Home() {
               a backend sandbox and turned into a fully working app with auth,
               tags, and way too much bubblegum energy. Switched from SQL to
               MongoDB mid-build, just for the plot.
+            </p>
+          </ProjectCard>
+          <ProjectCard
+            title="Colmar"
+            description="Pixel-Perfect Static Page"
+            imageSrc={colmarImage}
+            imageAlt="Colmar"
+            linkTo="https://32-tammy-colmar.vercel.app/"
+          >
+            <p className="pt-4 text-muted-foreground text-justify">
+              Pure HTML + TailwindCSS, no JS. Recreated a sample UI down to the
+              last pixel — fully responsive, deeply parent-child-core-memory
+              unlocked. Looked simple, turned out to be an optical illusion.
+            </p>
+          </ProjectCard>
+          <ProjectCard
+            title="React Assessment"
+            description="Basic React CRUD"
+            imageSrc={reactAsImage}
+            imageAlt="Colmar"
+            linkTo="https://32-tammy-react-assessment.vercel.app/"
+          >
+            <p className="pt-4 text-muted-foreground text-justify">
+              My first real React experience. Followed along with React docs
+              like it was a cooking show — line by line, hoping nothing burns.
+              Basic backend felt like a breeze compared to juggling states,
+              props, and racing the clock.
             </p>
           </ProjectCard>
         </div>
