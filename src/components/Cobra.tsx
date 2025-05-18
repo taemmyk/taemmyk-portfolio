@@ -34,12 +34,17 @@ function Cobra() {
             </p>
           </div>
         </div>
-        <div className="flex space-x-2">
-          <StyledTag hasBgAnimation={false}>MongoDB</StyledTag>
-          <StyledTag hasBgAnimation={false}>Express</StyledTag>
-          <StyledTag hasBgAnimation={false}>React</StyledTag>
-          <StyledTag hasBgAnimation={false}>Node</StyledTag>
-          <StyledTag hasBgAnimation={false}>MUI</StyledTag>
+        <div className="flex-col space-y-2">
+          <StyledTag showArrow={true} url="https://jsd9-spicy-cobra-frontend.vercel.app/">
+            Game time? Let's play!
+          </StyledTag>
+          <div className="flex space-x-2">
+            <StyledTag hasBgAnimation={false}>MongoDB</StyledTag>
+            <StyledTag hasBgAnimation={false}>Express</StyledTag>
+            <StyledTag hasBgAnimation={false}>React</StyledTag>
+            <StyledTag hasBgAnimation={false}>Node</StyledTag>
+            <StyledTag hasBgAnimation={false}>MUI</StyledTag>
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-y-10">

@@ -1,50 +1,80 @@
 import StyledTag from "./common/StyledTag";
+import scribblyGifImage from "../assets/scribbly-welcome.gif";
 
 function Scribbly() {
   return (
     <>
       <div
-        style={{ minHeight: `calc(100vh - 64px - 64px)` }}
-        className="flex flex-col justify-around"
+        style={{
+          minHeight: `calc(100vh - 64px - 64px)`,
+        }}
+        className="flex flex-col lg:flex-row relative overflow-visible"
       >
-        <div className="items-center">
-          <h1 className="font-atma text-6xl font-bold">
-            Scribbly Note-Taking Project
-          </h1>
-          <div className="pt-18 space-x-2 max-w-3xl">
-            <p className="pb-4">
-              Scribbly started as a “let’s see if I can do this” kind of idea
-              and quickly became the sandbox where I taught myself how backend
-              systems really work. It’s a minimal note-taking app built with the
-              MERN stack — but not before I took a little detour. I originally
-              started out using SQL with Turso, just to see what relational
-              databases felt like, before switching to MongoDB with Mongoose
-              once I realised it better suited the flexibility of this project.
-            </p>
-            <p>
-              The goal? Build a clean, functional app with features I actually
-              use: tagging, editing, and organising notes — plus full user
-              authentication. It’s now a fully working system with secure
-              login/signup and personalised note spaces per user. Scribbly isn’t
-              flashy but it works reliably, and I’m still surprised how much I
-              learned just from building something so "simple."
-            </p>
+        <div
+          className="w-full lg:w-[62.5%] bg-gradient-to-r from-background to-rose-200 
+               flex flex-col justify-around z-5 p-4"
+          style={{
+            minHeight: `calc(100vh - 128px)`,
+          }}
+        >
+          <div>
+            <h1 className="font-atma text-6xl font-bold">
+              Scribbly Note-Taking Project
+            </h1>
+            <div className="pt-18 space-x-2 max-w-3xl">
+              <p className="pb-4">
+                Scribbly started as a “let’s see if I can do this” kind of idea
+                and quickly became the sandbox where I taught myself how backend
+                systems really work. It’s a minimal note-taking app built with
+                the MERN stack — but not before I took a little detour. I
+                originally started out using SQL with Turso, just to see what
+                relational databases felt like, before switching to MongoDB with
+                Mongoose once I realised it better suited the flexibility of
+                this project.
+              </p>
+              <p>
+                The goal? Build a clean, functional app with features I actually
+                use: tagging, editing, and organising notes — plus full user
+                authentication. It’s now a fully working system with secure
+                login/signup and personalised note spaces per user. Scribbly
+                isn’t flashy but it works reliably, and I’m still surprised how
+                much I learned just from building something so "simple."
+              </p>
+            </div>
+          </div>
+          <div className="flex-col space-y-2">
+            <StyledTag showArrow={true} url="/">
+              Let's scribble!
+            </StyledTag>
+            <div className="flex space-x-2">
+              <StyledTag hasBgAnimation={false}>WIP</StyledTag>
+              <StyledTag hasBgAnimation={false}>MongoDB</StyledTag>
+              <StyledTag hasBgAnimation={false}>Express</StyledTag>
+              <StyledTag hasBgAnimation={false}>React</StyledTag>
+              <StyledTag hasBgAnimation={false}>Node</StyledTag>
+              <StyledTag hasBgAnimation={false}>shadcnUI</StyledTag>
+            </div>
           </div>
         </div>
-        <div className="flex space-x-2">
-          <StyledTag hasBgAnimation={false}>MongoDB</StyledTag>
-          <StyledTag hasBgAnimation={false}>Express</StyledTag>
-          <StyledTag hasBgAnimation={false}>React</StyledTag>
-          <StyledTag hasBgAnimation={false}>Node</StyledTag>
-          <StyledTag hasBgAnimation={false}>shadcnUI</StyledTag>
-        </div>
+
+        {/* รูปด้านขวา */}
+        <img
+          src={scribblyGifImage}
+          alt="Scribbly Welcome"
+          className="hidden lg:block absolute right-0 top-0 h-full object-cover z-0 pointer-events-none"
+          style={{
+            maxWidth: "50%",
+            transform: "translateX(24%)",
+          }}
+        />
       </div>
-      <div className="flex flex-col gap-y-10">
+
+      <div className="flex flex-col gap-y-10 mt-16">
         <div className="flex">
-          <div className="w-[30%]">
+          <div className="w-1/3">
             <p className="font-atma text-3xl">What I Did</p>
           </div>
-          <div className="w-[70%]">
+          <div className="w-2/3">
             <p className="text-justify">
               This was a full-stack solo project, so I wore all the hats — from
               spinning up the server to tweaking UI elements. On the backend, I
@@ -67,10 +97,10 @@ function Scribbly() {
           </div>
         </div>
         <div className="flex">
-          <div className="w-[30%]">
+          <div className="w-1/3">
             <p className="font-atma text-3xl">What I Learned</p>
           </div>
-          <div className="w-[70%]">
+          <div className="w-2/3">
             <p className="text-justify">
               Building Scribbly taught me how to truly own a project from top to
               bottom. I learned how different databases affect the way you
@@ -91,10 +121,10 @@ function Scribbly() {
           </div>
         </div>
         <div className="flex">
-          <div className="w-[30%]">
+          <div className="w-1/3">
             <p className="font-atma text-3xl">Future Implementation</p>
           </div>
-          <div className="w-[70%]">
+          <div className="w-2/3">
             <p className="text-justify">
               Now that the core is solid. I’m excited to build on it. I want to
               implement Markdown support for richer note formatting. I also plan
@@ -114,10 +144,10 @@ function Scribbly() {
           </div>
         </div>
         <div className="flex">
-          <div className="w-[30%]">
+          <div className="w-1/3">
             <p className="font-atma text-3xl">Conclusion</p>
           </div>
-          <div className="w-[70%]">
+          <div className="w-2/3">
             <p className="text-justify">
               Scribbly is my little backend success story — the app where I
               learned to troubleshoot problems I didn’t even know existed when I

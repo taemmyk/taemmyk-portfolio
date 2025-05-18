@@ -7,7 +7,7 @@ function Layout() {
     <div className="font-semibold">
       <Header />
       <main
-        className="container mx-auto py-8 px-6 mt-16"
+        className="container mx-auto pb-8 mt-16"
         style={{ minHeight: `calc(100vh - 64px - 64px)` }}
       >
         <Outlet />
