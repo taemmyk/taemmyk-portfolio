@@ -30,7 +30,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`relative overflow-hidden transition-all duration-300 group w-fit px-4 py-2 rounded-md border border-background flex items-center gap-x-2 whitespace-nowrap ${className}`}
+      className={`relative overflow-hidden transition-all duration-300 group w-fit px-4 py-2 bg-secondary rounded-md border border-background flex items-center gap-x-2 whitespace-nowrap ${className}`}
     >
       <div className="absolute inset-0 bg-muted z-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
       {showArrow && <MoveRight className="relative z-5" />}{" "}
@@ -85,7 +85,7 @@ function About() {
       <div className="flex flex-col gap-y-10 lg:gap-x-10 lg:flex-row">
         <div className="w-full lg:w-[40%] flex flex-col gap-y-4">
           <h4 className="font-atma text-xl">Career Targets</h4>
-          <div className="flex">
+          <div className="flex flex-wrap gap-2">
             <StyledButton>Full-Stack Developer</StyledButton>
             <StyledButton>Backend Developer</StyledButton>
           </div>
@@ -114,10 +114,10 @@ function About() {
           <h4 className="font-atma text-xl pt-4">Languages</h4>
           <div className="flex flex-wrap gap-2">
             <StyledButton>Thai (Native)</StyledButton>
-            <StyledButton>English (Advanced) </StyledButton>
+            <StyledButton>English (Intermediate) </StyledButton>
           </div>
           <h4 className="font-atma text-xl pt-4">Certifications</h4>
-          <div className="">
+          <div className="flex-col space-y-2">
             <StyledButton
               onClick={() =>
                 openCredential(
@@ -154,7 +154,7 @@ function About() {
           </div>
         </div>
         <div className="w-full lg:w-[60%]">
-          <Card>
+          <Card className="border-secondary">
             <CardHeader>
               <CardTitle className="text-xl md:text-2xl">
                 Bachelor of Creative Industries (Interactive and Visual Design)
