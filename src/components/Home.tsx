@@ -6,6 +6,7 @@ import scribblyGifImage from "../assets/scribbly-welcome.gif";
 import colmarImage from "../assets/colmar-layout-preview.png";
 import reactAsImage from "../assets/react-assessment-preview.png";
 import ProjectCard from "./common/ProjectCard";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 function Home() {
   const location = useLocation();
@@ -28,7 +29,10 @@ function Home() {
         className="bg-gradient-to-r from-background to-chart-3 flex flex-col justify-center p-4"
       >
         <h1 className="font-atma text-6xl font-bold">
-          Hello, this is Tammy<span className="text-2xl align-super">*</span>.
+          <span className="inline">Hello, I'm </span>
+          <TextAnimate animation="blurInUp" by="word" className="inline">
+            Tammy K.
+          </TextAnimate>
         </h1>
         <div className="pt-18 space-x-2">
           <span className="text-3xl pt-8">Currently</span>

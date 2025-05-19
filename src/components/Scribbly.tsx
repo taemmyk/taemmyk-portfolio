@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import StyledTag from "./common/StyledTag";
 import scribblyGifImage from "../assets/scribbly-welcome.gif";
+import { HyperText } from "@/components/magicui/hyper-text";
 
 function Scribbly() {
   useEffect(() => {
@@ -22,9 +23,11 @@ function Scribbly() {
           }}
         >
           <div>
-            <h1 className="font-atma text-6xl font-bold">
-              Scribbly Note-Taking Project
-            </h1>
+            <div className="h-56">
+              <h1>
+                <HyperText>Scribbly Note-Taking App Project</HyperText>
+              </h1>
+            </div>
             <div className="pt-18 space-x-2 max-w-3xl">
               <p className="pb-4">
                 Scribbly started as a “let’s see if I can do this” kind of idea

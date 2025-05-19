@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import StyledTag from "./common/StyledTag";
 import cobraLayoutImage from "../assets/cobra-vertical.png";
+import { HyperText } from "@/components/magicui/hyper-text";
 
 function Cobra() {
   useEffect(() => {
@@ -14,9 +15,11 @@ function Cobra() {
       >
         <div className="bg-gradient-to-r from-background to-chart-5 flex flex-col justify-around p-4 w-full lg:w-2/3">
           <div className="items-center">
-            <h1 className="font-atma text-6xl font-bold">
-              E-Commerce Game Store Project
-            </h1>
+            <div className="h-56">
+              <h1>
+                <HyperText>E-Commerce Game Store Project</HyperText>
+              </h1>
+            </div>
             <div className="pt-18 space-x-2 max-w-3xl">
               <p className="pb-4">
                 This was our final project for a full-time bootcamp — a team of
@@ -72,7 +75,7 @@ function Cobra() {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-y-10 mt-16 p-4">
+      <div className="flex flex-col gap-y-10 md:mt-16 p-4">
         <div className="flex flex-col md:flex-row">
           <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">What I Did</p>

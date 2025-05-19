@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import StyledTag from "./common/StyledTag";
+import { MorphingText } from "@/components/magicui/morphing-text";
 
 function About() {
   return (
@@ -22,9 +23,12 @@ function About() {
         className="bg-gradient-to-r from-background to-chart-2 flex flex-col justify-center p-4"
       >
         <h1 className="font-atma text-6xl font-bold">
-          Hello again, Tammy<span className="text-2xl align-super">*</span> is
-          here.
+          Hello again, this is{" "}
+          <span className="block sm:inline">
+            <MorphingText texts={["Tammy*", "Thanutchaporn*"]} />
+          </span>
         </h1>
+
         <p className="pt-4 text-sm italic">
           * My real name is <b>Thanutchaporn Kham-Iam</b>, but Tammy’s been my
           go-to for so long, even I do a double-take when someone calls me by
