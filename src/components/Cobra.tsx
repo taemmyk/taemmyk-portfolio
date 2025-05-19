@@ -41,14 +41,14 @@ function Cobra() {
               </p>
             </div>
           </div>
-          <div className="flex-col space-y-2">
+          <div className="flex-col space-y-2 pt-8 md:pt-0">
             <StyledTag
               showArrow={true}
               url="https://jsd9-spicy-cobra-frontend.vercel.app/"
             >
               Game time? Let's play!
             </StyledTag>
-            <div className="flex space-x-2">
+            <div className="flex flex-wrap gap-2">
               <StyledTag hasBgAnimation={false}>MongoDB</StyledTag>
               <StyledTag hasBgAnimation={false}>Express</StyledTag>
               <StyledTag hasBgAnimation={false}>React</StyledTag>
@@ -72,12 +72,12 @@ function Cobra() {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-y-10 mt-16">
-        <div className="flex">
-          <div className="w-[30%]">
+      <div className="flex flex-col gap-y-10 mt-16 p-4">
+        <div className="flex flex-col md:flex-row">
+          <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">What I Did</p>
           </div>
-          <div className="w-[70%]">
+          <div className="md:w-2/3">
             <p className="text-justify">
               On the technical side, I had my hands in everything. I helped spin
               up the initial project structure, set up our MongoDB database, and
@@ -98,11 +98,11 @@ function Cobra() {
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div className="w-[30%]">
+        <div className="flex flex-col md:flex-row">
+          <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">What I Learned</p>
           </div>
-          <div className="w-[70%]">
+          <div className="md:w-2/3">
             <p className="text-justify">
               Group work is… exhausting. It’s definitely harder than working
               solo but for a project this size, collaboration was key. I had to
@@ -122,11 +122,11 @@ function Cobra() {
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div className="w-[30%]">
+        <div className="flex flex-col md:flex-row">
+          <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">Future Implementation</p>
           </div>
-          <div className="w-[70%]">
+          <div className="md:w-2/3">
             <p className="text-justify">
               There’s a lot we still want to build! Payment processing is
               currently mocked, but Stripe integration is high on the list. We
@@ -153,11 +153,11 @@ function Cobra() {
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div className="w-[30%]">
+        <div className="flex flex-col md:flex-row">
+          <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">Conclusion</p>
           </div>
-          <div className="w-[70%]">
+          <div className="md:w-2/3">
             <p className="text-justify">
               This project pushed me on every front — technically, mentally, and
               even emotionally. Between handling group dynamics, managing my

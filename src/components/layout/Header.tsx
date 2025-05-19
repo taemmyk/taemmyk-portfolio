@@ -15,8 +15,8 @@ function Layout() {
     <>
       <header className="bg-secondary shadow h-16 fixed top-0 w-full z-10">
         <nav className="container mx-auto py-4 px-6 flex justify-between">
-          <ul className="flex items-center space-x-6 list-none p-0">
-            <li className="mr-8">
+          <ul className="flex items-center space-x-2 md:space-x-6 list-none p-0">
+            <li className="md:mr-8">
               <Link
                 to="/"
                 className="font-atma text-xl font-black text-foreground hover:text-muted-foreground hover:text-shadow-lg"
@@ -57,7 +57,7 @@ function Layout() {
               </Button>
             </li>
           </ul>
-          <ul className="flex items-center space-x-6 list-none p-0">
+          <ul className="flex items-center space-x-2 md:space-x-6 list-none p-0">
             <li className="hidden md:block">
               <p className="text-muted-foreground font-bold">Open for Work!</p>
             </li>

@@ -46,11 +46,11 @@ function Scribbly() {
               </p>
             </div>
           </div>
-          <div className="flex-col space-y-2">
+          <div className="flex-col space-y-2 pt-8 md:pt-0">
             <StyledTag showArrow={true} url="/">
               Let's scribble!
             </StyledTag>
-            <div className="flex space-x-2">
+            <div className="flex flex-wrap gap-2">
               <StyledTag hasBgAnimation={false}>WIP</StyledTag>
               <StyledTag hasBgAnimation={false}>MongoDB</StyledTag>
               <StyledTag hasBgAnimation={false}>Express</StyledTag>
@@ -72,12 +72,12 @@ function Scribbly() {
         />
       </div>
 
-      <div className="flex flex-col gap-y-10 mt-16">
-        <div className="flex">
-          <div className="w-1/3">
+      <div className="flex flex-col gap-y-10 mt-16 p-4">
+        <div className="flex flex-col md:flex-row">
+          <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">What I Did</p>
           </div>
-          <div className="w-2/3">
+          <div className="md:w-2/3">
             <p className="text-justify">
               This was a full-stack solo project, so I wore all the hats — from
               spinning up the server to tweaking UI elements. On the backend, I
@@ -99,11 +99,11 @@ function Scribbly() {
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div className="w-1/3">
+        <div className="flex flex-col md:flex-row">
+          <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">What I Learned</p>
           </div>
-          <div className="w-2/3">
+          <div className="md:w-2/3">
             <p className="text-justify">
               Building Scribbly taught me how to truly own a project from top to
               bottom. I learned how different databases affect the way you
@@ -123,11 +123,11 @@ function Scribbly() {
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div className="w-1/3">
+        <div className="flex flex-col md:flex-row">
+          <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">Future Implementation</p>
           </div>
-          <div className="w-2/3">
+          <div className="md:w-2/3">
             <p className="text-justify">
               Now that the core is solid. I’m excited to build on it. I want to
               implement Markdown support for richer note formatting. I also plan
@@ -146,11 +146,11 @@ function Scribbly() {
             </p>
           </div>
         </div>
-        <div className="flex">
-          <div className="w-1/3">
+        <div className="flex flex-col md:flex-row">
+          <div className="pb-2 md:w-1/3">
             <p className="font-atma text-3xl">Conclusion</p>
           </div>
-          <div className="w-2/3">
+          <div className="md:w-2/3">
             <p className="text-justify">
               Scribbly is my little backend success story — the app where I
               learned to troubleshoot problems I didn’t even know existed when I

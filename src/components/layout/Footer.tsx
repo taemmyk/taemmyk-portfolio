@@ -29,14 +29,14 @@ function Footer() {
 
   return (
     <>
-      <footer className="bg-secondary shadow h-16 py-4 flex flex-col items-center">
+      <footer className="bg-secondary shadow h-24 lg:h-16 py-4 flex flex-col items-center">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex space-x-3 w-1/3">
+          <div className="flex space-x-3 w-1/3 pl-2">
             <span className="whitespace-nowrap">Based in Bangkok</span>
-            <MoveRight className="h-5 w-5 text-foreground" />
+            <MoveRight className="md:h-5 md:w-5 text-foreground" />
             <span className="whitespace-nowrap">{formatTime(currentTime)}</span>
           </div>
-          <div className="container mx-auto w-1/3 text-center mt-2">
+          <div className="hidden lg:block container mx-auto w-1/3 text-center mt-2">
             © {new Date().getFullYear()} TK. | All Rights Reserved.
           </div>
           <div className="w-1/3 flex justify-end">
@@ -49,6 +49,9 @@ function Footer() {
             </Button>
           </div>
         </div>
+        <div className="lg:hidden container mx-auto text-center mt-2">
+            © {new Date().getFullYear()} TK. | All Rights Reserved.
+          </div>
       </footer>
     </>
   );

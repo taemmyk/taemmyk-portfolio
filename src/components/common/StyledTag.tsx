@@ -8,15 +8,17 @@ interface StyledTagProps {
   showArrow?: boolean;
   hasBgAnimation?: boolean;
   url?: string;
+  allowTextWrap?: boolean;
 }
 
 const StyledTag: React.FC<StyledTagProps> = ({
   children,
   onClick,
-  className,
+  className = "",
   showArrow = false,
   hasBgAnimation = true,
   url,
+  allowTextWrap = false,
 }) => {
   const handleClick = () => {
     if (url) {
@@ -26,13 +28,17 @@ const StyledTag: React.FC<StyledTagProps> = ({
     }
   };
 
+  const wrapClass = allowTextWrap ? "whitespace-normal" : "whitespace-nowrap";
+
+  const sharedClassNames = `relative overflow-hidden transition-all duration-300 group w-fit px-4 py-2 bg-secondary text-accent-foreground rounded-md border border-background flex items-center gap-x-2 ${wrapClass} ${className}`;
+
   if (url) {
     return (
       <a
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className={`relative overflow-hidden transition-all duration-300 group w-fit px-4 py-2 bg-secondary text-accent-foreground rounded-md border border-background flex items-center gap-x-2 whitespace-nowrap ${className}`}
+        className={sharedClassNames}
       >
         {hasBgAnimation && (
           <div className="absolute inset-0 bg-muted z-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
@@ -44,10 +50,7 @@ const StyledTag: React.FC<StyledTagProps> = ({
   }
 
   return (
-    <button
-      onClick={handleClick}
-      className={`relative overflow-hidden transition-all duration-300 group w-fit px-4 py-2 bg-secondary text-accent-foreground rounded-md border border-background flex items-center gap-x-2 whitespace-nowrap ${className}`}
-    >
+    <button onClick={handleClick} className={sharedClassNames}>
       {hasBgAnimation && (
         <div className="absolute inset-0 bg-muted z-0 transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
       )}

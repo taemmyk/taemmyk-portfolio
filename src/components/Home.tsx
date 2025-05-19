@@ -25,7 +25,7 @@ function Home() {
     <>
       <div
         style={{ minHeight: `calc(100vh - 64px - 64px)` }}
-        className="bg-gradient-to-r from-background to-chart-3 flex flex-col justify-center"
+        className="bg-gradient-to-r from-background to-chart-3 flex flex-col justify-center p-4"
       >
         <h1 className="font-atma text-6xl font-bold">
           Hello, this is Tammy<span className="text-2xl align-super">*</span>.
@@ -53,9 +53,9 @@ function Home() {
           </p>
         </div>
       </div>
-      <div id="work" className="mt-8">
+      <div id="work" className="mt-8 p-4">
         <h2 className="text-4xl font-bold font-atma">Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-4 pt-8 px-2 md:px-8 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4 pt-8 px-2 md:px-8 items-stretch">
           <ProjectCard
             title="Cobra Game"
             description="E-Commerce App"

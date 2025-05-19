@@ -37,7 +37,7 @@ const ProjectCard: React.FC<ScribblyCardProps> = ({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <img src={imageSrc} alt={imageAlt} className="w-full h-64 object-contain"/>
+          <img src={imageSrc} alt={imageAlt} className="w-full lg:h-64 object-contain"/>
           {children && <div className="pt-4">{children}</div>}
         </CardContent>
       </Card>
