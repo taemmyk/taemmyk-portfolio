@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { MoveRight } from "lucide-react";
 import {
   Accordion,
@@ -16,6 +17,9 @@ import StyledTag from "./common/StyledTag";
 import { MorphingText } from "@/components/magicui/morphing-text";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <div
