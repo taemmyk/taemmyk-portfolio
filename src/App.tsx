@@ -1,12 +1,13 @@
-import "./App.css";
+import Hero from "@/pages/hero";
 import Projects from "@/pages/projects";
 import About from "@/pages/about";
 
 function App() {
   return (
     <>
-      <Projects />
-      <About />
+      <Hero />
+      {/* <Projects />
+      <About /> */}
     </>
   );
 }
