@@ -1,12 +1,10 @@
 import "./App.css";
-import Projects from "@/pages/projects"
-import Articles from "@/pages/articles"
+import Projects from "@/pages/projects";
 
 function App() {
   return (
     <>
-      <Projects/>
-      <Articles/>
+      <Projects />
     </>
   );
 }
