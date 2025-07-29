@@ -96,7 +96,6 @@
 }
 
 @theme {
-  --font-tenor: "Tenor Sans", sans-serif;
-  --font-nunito: "Nunito", sans-serif;
-  --font-noto: "Noto Sans Thai", sans-serif;
+  --font-tenor: "Tenor Sans", "Noto Sans Thai", sans-serif;
+  --font-nunito: "Nunito", "Noto Sans Thai", sans-serif;
 }

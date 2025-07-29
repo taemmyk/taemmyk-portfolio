@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@radix-ui/react-separator";
 import { ArrowUpRight } from "lucide-react";
+import { openExternalLink } from "@/lib/utils-link";
 
 type ProjectItemProps = {
   index?: number;
@@ -29,15 +30,6 @@ function ProjectItem({
   backend,
   deployment,
 }: ProjectItemProps) {
-  const handleLink = (url: string) => {
-    try {
-      const validUrl = new URL(url);
-      window.open(validUrl.href, "_blank");
-    } catch {
-      console.error("Invalid URL:", url);
-    }
-  };
-
   return (
     <div className="py-4">
       <div className="flex justify-between px-2 md:px-4">
@@ -51,8 +43,8 @@ function ProjectItem({
           {repo && (
             <Button
               variant="ghost"
-              className="font-tenor text-xs md:text-sm hover:bg-transparent"
-              onClick={() => handleLink(repo)}
+              className="font-tenor text-xs text-accent md:text-sm hover:bg-transparent"
+              onClick={() => openExternalLink(repo)}
             >
               {repoDef ? repoDef : "repository"}
               <ArrowUpRight />
@@ -61,8 +53,8 @@ function ProjectItem({
           {fullstack && (
             <Button
               variant="ghost"
-              className="font-tenor text-xs md:text-sm hover:bg-transparent"
-              onClick={() => handleLink(fullstack)}
+              className="font-tenor text-xs text-accent md:text-sm hover:bg-transparent"
+              onClick={() => openExternalLink(fullstack)}
             >
               {fullstackDef ? fullstackDef : "repository"}
               <ArrowUpRight />
@@ -71,8 +63,8 @@ function ProjectItem({
           {frontend && (
             <Button
               variant="ghost"
-              className="font-tenor text-xs md:text-sm hover:bg-transparent"
-              onClick={() => handleLink(frontend)}
+              className="font-tenor text-xs text-accent md:text-sm hover:bg-transparent"
+              onClick={() => openExternalLink(frontend)}
             >
               frontend
               <ArrowUpRight />
@@ -81,8 +73,8 @@ function ProjectItem({
           {backend && (
             <Button
               variant="ghost"
-              className="font-tenor text-xs md:text-sm hover:bg-transparent"
-              onClick={() => handleLink(backend)}
+              className="font-tenor text-xs text-accent md:text-sm hover:bg-transparent"
+              onClick={() => openExternalLink(backend)}
             >
               backend <ArrowUpRight />
             </Button>
@@ -90,8 +82,8 @@ function ProjectItem({
           {deployment && (
             <Button
               variant="ghost"
-              className="font-tenor text-xs md:text-sm hover:bg-transparent"
-              onClick={() => handleLink(deployment)}
+              className="font-tenor text-xs text-accent md:text-sm hover:bg-transparent"
+              onClick={() => openExternalLink(deployment)}
             >
               deployment <ArrowUpRight />
             </Button>
