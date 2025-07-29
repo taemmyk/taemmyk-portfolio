@@ -3,19 +3,29 @@ import { Separator } from "@radix-ui/react-separator";
 import { ArrowUpRight } from "lucide-react";
 
 type ProjectItemProps = {
+  index?: number;
   title: string;
   description: string;
   tags: string[];
-  frontend: string;
-  backend: string;
+  frontend?: string;
+  backend?: string;
   deployment?: string;
+  repo?: string;
+  repoDef?: string;
+  fullstack?: string;
+  fullstackDef?: string;
 };
 
 function ProjectItem({
+  index,
   title,
   description,
   tags,
+  repo,
+  repoDef,
   frontend,
+  fullstack,
+  fullstackDef,
   backend,
   deployment,
 }: ProjectItemProps) {
@@ -31,23 +41,52 @@ function ProjectItem({
   return (
     <div className="py-4">
       <div className="flex justify-between px-2 md:px-4">
-        <h3 className="font-tenor text-lg md:text-2xl text-accent-foreground">{title}</h3>
+        <h3 className="font-tenor text-2xl text-accent-foreground">
+          <span className="hidden md:inline-block mr-10">
+            {index !== undefined ? String(index + 1).padStart(2, "0") : ""}
+          </span>
+          {title}
+        </h3>
         <div className="flex items-center h-full">
-          <Button
-            variant="ghost"
-            className="font-tenor text-xs md:text-sm hover:bg-transparent"
-            onClick={() => handleLink(frontend)}
-          >
-            frontend
-            <ArrowUpRight />
-          </Button>
-          <Button
-            variant="ghost"
-            className="font-tenor text-xs md:text-sm hover:bg-transparent"
-            onClick={() => handleLink(backend)}
-          >
-            backend <ArrowUpRight />
-          </Button>
+          {repo && (
+            <Button
+              variant="ghost"
+              className="font-tenor text-xs md:text-sm hover:bg-transparent"
+              onClick={() => handleLink(repo)}
+            >
+              {repoDef ? repoDef : "repository"}
+              <ArrowUpRight />
+            </Button>
+          )}
+          {fullstack && (
+            <Button
+              variant="ghost"
+              className="font-tenor text-xs md:text-sm hover:bg-transparent"
+              onClick={() => handleLink(fullstack)}
+            >
+              {fullstackDef ? fullstackDef : "repository"}
+              <ArrowUpRight />
+            </Button>
+          )}
+          {frontend && (
+            <Button
+              variant="ghost"
+              className="font-tenor text-xs md:text-sm hover:bg-transparent"
+              onClick={() => handleLink(frontend)}
+            >
+              frontend
+              <ArrowUpRight />
+            </Button>
+          )}
+          {backend && (
+            <Button
+              variant="ghost"
+              className="font-tenor text-xs md:text-sm hover:bg-transparent"
+              onClick={() => handleLink(backend)}
+            >
+              backend <ArrowUpRight />
+            </Button>
+          )}
           {deployment && (
             <Button
               variant="ghost"
@@ -59,9 +98,11 @@ function ProjectItem({
           )}
         </div>
       </div>
-      <Separator className="bg-muted-foreground h-px my-2" />
-      <div className="flex px-2 md:px-4 h-full md:space-x-2 items-center">
-        <span className="font-nunito text-sm md:text-md text-muted-foreground">{description}</span>
+      <Separator className="bg-muted-foreground h-px my-2 md:ml-18" />
+      <div className="flex px-2 md:ml-18 md:px-4 h-full md:space-x-2 items-center">
+        <span className="font-nunito text-sm md:text-md text-muted-foreground">
+          {description}
+        </span>
         {tags.length > 0 && (
           <>
             <Separator
