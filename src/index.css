@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tenor+Sans&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -63,7 +63,7 @@
   --muted: oklch(0.22 0.03 260);
   --muted-foreground: oklch(0.6 0.02 260);
 
-  --accent: oklch(0.3 0.12 260);
+  --accent: oklch(0.60 0.10 200);
   --accent-foreground: oklch(0.81 0.12 75);
 
   --destructive: oklch(0.577 0.245 27.325);
@@ -98,4 +98,5 @@
 @theme {
   --font-tenor: "Tenor Sans", sans-serif;
   --font-nunito: "Nunito", sans-serif;
+  --font-noto: "Noto Sans Thai", sans-serif;
 }

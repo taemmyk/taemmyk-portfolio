@@ -56,7 +56,7 @@ function Projects() {
       <div className="flex min-h-28 mb-8">
         <Separator
           orientation="vertical"
-          className="w-px md:w-0.5 bg-muted-foreground mr-2 md:mr-4"
+          className="w-px md:w-0.5 bg-secondary mr-2 md:mr-4"
         />
         <h2 className="font-tenor text-4xl">Projects</h2>
       </div>

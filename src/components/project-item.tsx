@@ -98,7 +98,7 @@ function ProjectItem({
           )}
         </div>
       </div>
-      <Separator className="bg-muted-foreground h-px my-2 md:ml-18" />
+      <Separator className="bg-secondary h-px my-2 md:ml-18" />
       <div className="flex px-2 md:ml-18 md:px-4 h-full md:space-x-2 items-center">
         <span className="font-nunito text-sm md:text-md text-muted-foreground">
           {description}
@@ -107,7 +107,7 @@ function ProjectItem({
           <>
             <Separator
               orientation="vertical"
-              className="w-px md:w-0.5 h-6 bg-muted-foreground mx-2 md:ml-0"
+              className="w-px md:w-0.5 h-6 bg-secondary mx-2 md:ml-0"
             />
             <div className="flex gap-2 items-center">
               {tags.map((tag, index) => (
