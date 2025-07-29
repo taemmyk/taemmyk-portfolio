@@ -45,13 +45,13 @@
 :root {
   --radius: 0.625rem;
   --radius: 0.625rem;
-  --background: oklch(0.14 0.02 260);
-  --foreground: oklch(0.98 0.01 260);
+  --background: oklch(13.906% 0.01963 259.673);
+  --foreground: oklch(98.081% 0.00917 258.497);
 
-  --card: oklch(0.16 0.01 260);
+  --card: oklch(15.928% 0.01116 267.992);
   --card-foreground: oklch(0.98 0.01 260);
 
-  --popover: oklch(0.60 0.10 200);
+  --popover: oklch(60.079% 0.10013 200.099);
   --popover-foreground: oklch(0.98 0.01 260);
 
   --primary: oklch(0.35 0.18 260);
@@ -60,7 +60,7 @@
   --secondary: oklch(0.25 0.06 260);
   --secondary-foreground: oklch(0.98 0.01 260);
 
-  --muted: oklch(0.22 0.03 260);
+  --muted: rgb(18, 27, 41);
   --muted-foreground: oklch(0.6 0.02 260);
 
   --accent: oklch(0.60 0.10 200);
