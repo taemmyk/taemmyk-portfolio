@@ -1,0 +1,48 @@
+export const projectList = [
+  {
+    title: "LivePoll",
+    description: "E-commerce",
+    tags: ["next.js", "WebSocket"],
+    repo: "https://github.com/example/frontend",
+    deployment: "https://cobra-shop.example.com",
+  },
+  {
+    title: "Shopping list",
+    description: "E-commerce",
+    tags: ["ASP .NET", "C#", "MVC", "Python", "Selenium"],
+    repo: "https://github.com/example/backend",
+    repoDef: "python scraper",
+    fullstack: "https://github.com/example/frontend",
+    fullstackDef: "MVC",
+  },
+  {
+    title: "DMS",
+    description: "E-commerce",
+    tags: ["MERN", "Admin", "REST"],
+    frontend: "https://github.com/example/frontend",
+    backend: "https://github.com/example/backend",
+  },
+  {
+    title: "C#",
+    description: "E-commerce",
+    tags: ["MERN", "Admin", "REST"],
+    repo: "https://github.com/example/frontend",
+    repoDef: "console program",
+  },
+  {
+    title: "Scribbly",
+    description: "E-commerce",
+    tags: ["MERN", "Admin", "REST"],
+    frontend: "https://github.com/example/frontend",
+    backend: "https://github.com/example/backend",
+    deployment: "https://cobra-shop.example.com",
+  },
+  {
+    title: "Cobra",
+    description: "E-commerce",
+    tags: ["MERN", "Admin", "REST"],
+    frontend: "https://github.com/example/frontend",
+    backend: "https://github.com/example/backend",
+    deployment: "https://cobra-shop.example.com",
+  },
+];
