@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useLayoutEffect, useEffect, useState } from "react";
 import Greeting from "./greeting";
 import Projects from "./projects";
 import About from "./about";
@@ -9,82 +9,96 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Content() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const outerRef = useRef<HTMLDivElement>(null);
   const [isMdScreen, setIsMdScreen] = useState(false);
 
+  // 👁 Check screen size
   useEffect(() => {
     const handleResize = () => {
       setIsMdScreen(window.innerWidth >= 768);
     };
-
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (!isMdScreen || !containerRef.current) return;
+  // 🎯 Horizontal Scroll Setup
+  useLayoutEffect(() => {
+    if (!isMdScreen || !containerRef.current || !outerRef.current) return;
 
-    const totalSections = 3;
-    const maxScroll = window.innerWidth * (totalSections - 1);
+    const container = containerRef.current;
+    const outer = outerRef.current;
 
-    gsap.to(containerRef.current, {
-      x: () => -maxScroll,
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: () => `+=${maxScroll}`,
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        markers: false,
-      },
-    });
+    const totalScroll = container.scrollWidth - window.innerWidth;
+
+    const ctx = gsap.context(() => {
+      gsap.to(container, {
+        x: -totalScroll,
+        ease: "none",
+        scrollTrigger: {
+          trigger: outer,
+          start: "top top",
+          end: () => `+=${totalScroll}`,
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+    }, outer);
+
+    ScrollTrigger.refresh();
 
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+      ctx.revert();
     };
   }, [isMdScreen]);
 
+  // 📱 Vertical scroll for small screens
   if (!isMdScreen) {
-    // Mobile
     return (
       <div className="flex flex-col">
-        <section >
+        <section className="min-h-screen">
           <Greeting />
         </section>
-        <section >
+        <section className="min-h-screen">
           <Projects />
         </section>
-        <section>
+        <section className="mb-8">
           <About />
         </section>
       </div>
     );
   }
 
-  // Desktop
+  // 💻 Horizontal scroll for desktop
   return (
-    <div className="hide-scrollbar" style={{ height: "310vh", overflowX: "hidden", position: "relative" }}>
+    <div
+      ref={outerRef}
+      className="hide-scrollbar"
+      style={{
+        height: "100vh",
+        overflowX: "hidden",
+        position: "relative",
+      }}
+    >
       <div
         ref={containerRef}
+        className="flex h-screen"
         style={{
-          display: "flex",
-          width: "250vw",
-          height: "100vh",
-          position: "fixed",
+          width: "max-content",
+          position: "absolute",
           top: 0,
           left: 0,
         }}
       >
-        <section className="w-[75vw] h-screen flex justify-center items-center">
+        <section className="w-screen h-screen flex-shrink-0 flex justify-center items-cente">
           <Greeting />
         </section>
-        <section className="w-[95vw] h-screen flex justify-center items-center">
+        <section className="w-screen h-screen flex-shrink-0 flex justify-center items-center">
           <Projects />
         </section>
-        <section className="w-[80vw] h-screen flex justify-center items-center">
+        <section className="w-screen h-screen flex-shrink-0 flex justify-center items-center">
           <About />
         </section>
       </div>
