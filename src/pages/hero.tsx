@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import HeroStopmotion from "@/components/hero-stopmotion";
+import StopMotion from "@/pages/stopmotion";
 import HeroContent from "@/pages/hero-content";
 
 function Hero() {
@@ -23,7 +23,7 @@ function Hero() {
     <>
       <div className="h-screen">
         {isLgScreen && !hasSkipped ? (
-          <HeroStopmotion onSkip={handleSkip} />
+          <StopMotion onSkip={handleSkip} />
         ) : (
           <div className="flex items-center justify-center h-full text-center p-8">
             <h1 className="text-xl font-semibold">sm-md</h1>

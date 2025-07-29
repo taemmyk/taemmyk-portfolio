@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -28,7 +29,38 @@ const sneakFrames = [sneak1, sneak2, sneak3, sneak4, sneak5, sneak6];
 
 gsap.registerPlugin(ScrollTrigger);
 
-function HeroStopmotion({ onSkip }: { onSkip: () => void }) {
+function StopMotion() {
+  const navigate = useNavigate();
+  const [slideOut, setSlideOut] = useState(false);
+
+  const handleNextSection = () => {
+    if (slideOut) return;
+    setSlideOut(true);
+    setTimeout(() => {
+      navigate("/me");
+    }, 600); // ต้องตรงกับ transition duration
+  };
+
+  const [scrollPercent, setScrollPercent] = useState(0);
+  useEffect(() => {
+    const scrollEnd = 1000;
+
+    const scrollProgressTrigger = ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: 0,
+      end: scrollEnd,
+      scrub: true,
+      onUpdate: (self) => {
+        const percent = Math.round(self.progress * 100);
+        setScrollPercent(percent);
+      },
+    });
+
+    return () => {
+      scrollProgressTrigger.kill();
+    };
+  }, []);
+
   const catRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const floorRef = useRef<HTMLDivElement>(null);
@@ -222,16 +254,6 @@ function HeroStopmotion({ onSkip }: { onSkip: () => void }) {
         },
       });
 
-      // ✨ Trigger เมื่อ scroll จบ (progress = 1)
-      ScrollTrigger.create({
-        trigger: document.body,
-        start: scrollEnd * 0.99,
-        end: scrollEnd,
-        onEnter: () => {
-          onSkip(); // → scroll ไป section ถัดไป
-        },
-      });
-
       ScrollTrigger.refresh();
 
       return () => {
@@ -265,10 +287,26 @@ function HeroStopmotion({ onSkip }: { onSkip: () => void }) {
     return () => clearInterval(intervalId);
   }, []);
 
+  const [skipped, setSkipped] = useState(false);
+
+  useEffect(() => {
+    if (!skipped && scrollPercent >= 95) {
+      setSkipped(true);
+      handleNextSection();
+    }
+  }, [scrollPercent, skipped]);
+
   return (
     <div
       ref={containerRef}
-      style={{ height: "200vh", background: "#050911", position: "relative" }}
+      style={{
+        height: "200vh",
+        background: "#050911",
+        position: "relative",
+        opacity: slideOut ? 0 : 1,
+        transition: "opacity 0.6s ease-in-out",
+        pointerEvents: slideOut ? "none" : "auto",
+      }}
     >
       <div
         ref={floorRef}
@@ -361,7 +399,7 @@ function HeroStopmotion({ onSkip }: { onSkip: () => void }) {
       <Button
         variant="secondary"
         className="fixed bottom-6 right-6 z-50 text-accent font-nunito text-lg py-8 bg-transparent shadow-none"
-        onClick={onSkip}
+        onClick={handleNextSection}
       >
         skip
         <img src={paw} className="w-24 h-24" />
@@ -370,4 +408,4 @@ function HeroStopmotion({ onSkip }: { onSkip: () => void }) {
   );
 }
 
-export default HeroStopmotion;
+export default StopMotion;

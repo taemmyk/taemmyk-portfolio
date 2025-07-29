@@ -1,13 +1,14 @@
-import Hero from "@/pages/hero";
-import Projects from "@/pages/projects";
-import About from "@/pages/about";
+import { Routes, Route } from "react-router-dom";
+import StopMotion from "./pages/stopmotion";
+import Content from "./pages/content";
 
 function App() {
   return (
     <>
-      <Hero />
-      {/* <Projects />
-      <About /> */}
+      <Routes>
+      <Route path="/" element={<StopMotion />} />
+      <Route path="/me" element={<Content />} />
+    </Routes>
     </>
   );
 }
