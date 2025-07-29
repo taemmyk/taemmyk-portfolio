@@ -33,21 +33,21 @@ function About() {
             <table>
               <tbody>
                 <tr>
-                  <td className="pr-10">2013</td>
+                  <td className="pr-10 text-sm md:text-md">2013</td>
                   <td className="text-sm md:text-lg">
                     Native Thai moved to study in Brisbane
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-2">2018</td>
-                  <td className="text-smmd:text-lg">
+                  <td className="py-3 md:py-2 text-sm md:text-md">2018</td>
+                  <td className="py-3 md:py-2 text-sm md:text-lg">
                     Gained UX/UI designer internship experience
                   </td>
                 </tr>
                 <tr>
-                  <td>2019</td>
+                  <td className="text-sm md:text-md">2019</td>
                   <td className="text-sm md:text-lg">
-                    Graduated
+                    Graduated from
                     <Button
                       variant="link"
                       className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
@@ -63,7 +63,7 @@ function About() {
                   </td>
                 </tr>
                 <tr>
-                  <td>2021</td>
+                  <td className="text-sm md:text-md">2021</td>
                   <td className="text-sm md:text-lg">
                     Self-taught Unity and earned
                     <Button
@@ -78,7 +78,7 @@ function About() {
                   </td>
                 </tr>
                 <tr>
-                  <td>2022</td>
+                  <td className="text-sm md:text-md">2022</td>
                   <td className="text-sm md:text-lg">
                     Started to experiment
                     <Button
@@ -93,7 +93,7 @@ function About() {
                   </td>
                 </tr>
                 <tr>
-                  <td>2025</td>
+                  <td className="text-sm md:text-md">2025</td>
                   <td className="text-sm md:text-lg">
                     Joined a{" "}
                     <Button
@@ -114,7 +114,11 @@ function About() {
           </div>
           <div className="mt-8 ml-8 md:ml-24 font-tenor">
             <div className="flex justify-between">
-              <Button variant="ghost" className="text-xl hover:bg-transparent" onClick={emailMe}>
+              <Button
+                variant="ghost"
+                className="text-xl hover:bg-transparent"
+                onClick={emailMe}
+              >
                 email
                 <Send />
               </Button>
@@ -123,7 +127,11 @@ function About() {
               </span>
             </div>
             <div className="flex justify-between">
-              <Button variant="ghost" className="text-xl hover:bg-transparent" onClick={callMe}>
+              <Button
+                variant="ghost"
+                className="text-xl hover:bg-transparent"
+                onClick={callMe}
+              >
                 phone
                 <PhoneOutgoing />
               </Button>
