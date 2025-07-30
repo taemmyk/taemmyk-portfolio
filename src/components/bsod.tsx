@@ -54,7 +54,9 @@ function StopMotion() {
     }
 
     requestAnimationFrame(() => {
-      const scrollEnd = 1000;
+      const scrollEnd = Math.floor(
+        (document.documentElement.scrollHeight - window.innerHeight) * 0.5
+      );
 
       if (catRef.current) {
         gsap.set(catRef.current, { x: 0 });
@@ -151,7 +153,7 @@ function StopMotion() {
           scrollTrigger: {
             trigger: document.body,
             start: scrollEnd * 0.95,
-            end: scrollEnd,
+            end: scrollEnd * 0.98,
             scrub: true,
           },
         }
@@ -159,8 +161,8 @@ function StopMotion() {
 
       ScrollTrigger.create({
         trigger: document.body,
-        start: scrollEnd * 0.55,
-        end: scrollEnd * 0.6,
+        start: scrollEnd * 0.45,
+        end: scrollEnd * 0.5,
         scrub: true,
         onUpdate: (self) => {
           const progress = self.progress;
@@ -229,7 +231,7 @@ function StopMotion() {
     <div
       ref={containerRef}
       style={{
-        height: "50vh",
+        height: "100vh",
         position: "relative",
       }}
     >

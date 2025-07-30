@@ -13,7 +13,7 @@ function Content() {
   const outerRef = useRef<HTMLDivElement>(null);
   const [isMdScreen, setIsMdScreen] = useState(false);
 
-  // 👁 Check screen size
+  // Check screen size
   useEffect(() => {
     const handleResize = () => {
       setIsMdScreen(window.innerWidth >= 768);
@@ -23,7 +23,7 @@ function Content() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 🎯 Horizontal Scroll Setup
+  // Horizontal Scroll Setup
   useLayoutEffect(() => {
     if (!isMdScreen || !containerRef.current || !outerRef.current) return;
 
@@ -55,7 +55,7 @@ function Content() {
     };
   }, [isMdScreen]);
 
-  // 📱 Vertical scroll for small screens
+  // Vertical scroll for small screens
   if (!isMdScreen) {
     return (
       <div className="flex flex-col">
@@ -72,7 +72,7 @@ function Content() {
     );
   }
 
-  // 💻 Horizontal scroll for desktop
+  // Horizontal scroll for desktop
   return (
     <div
       ref={outerRef}
@@ -106,7 +106,7 @@ function Content() {
       </div>
 
       <div
-        className="pointer-events-none absolute top-0 left-0 w-[50vw] h-[50vh] z-50"
+        className="pointer-events-none absolute top-0 left-0 w-[100vw] h-[100vh] z-50"
         style={{ touchAction: "none" }}
       >
         <StopMotion />

@@ -4,7 +4,7 @@ function Greeting() {
       <div className="w-full h-full">
         <p className="font-tenor text-[clamp(0.8rem,4vw,2rem)] mx-4 mr-64 p-4 bg-popover text-popover-foreground">
           Curious developer who loves building, learning, and occasionally
-          breaking thing <br />
+          breaking thing{" "}
           <span className="italic">(on purpose, I promise)</span>.
         </p>
 
@@ -17,7 +17,8 @@ function Greeting() {
           </div>
           <div>
             <p className="text-left font-thin text-sm">
-              For working together,<br />
+              For working together,
+              <br />
               I’m looking for new roles.
             </p>
           </div>
