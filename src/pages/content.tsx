@@ -1,4 +1,5 @@
 import { useRef, useLayoutEffect, useEffect, useState } from "react";
+import StopMotion from "@/components/bsod";
 import Greeting from "./greeting";
 import Projects from "./projects";
 import About from "./about";
@@ -74,14 +75,15 @@ function Content() {
   // 💻 Horizontal scroll for desktop
   return (
     <div
-      ref={outerRef}
-      className="hide-scrollbar"
-      style={{
-        height: "100vh",
-        overflowX: "hidden",
-        position: "relative",
-      }}
-    >
+    ref={outerRef}
+    className="hide-scrollbar"
+    style={{
+      height: "100vh",
+      overflowX: "hidden",
+      overflowY: "hidden",
+      position: "relative",
+    }}
+  >
       <div
         ref={containerRef}
         className="flex h-screen"
@@ -92,7 +94,7 @@ function Content() {
           left: 0,
         }}
       >
-        <section className="w-screen h-screen flex-shrink-0 flex justify-center items-cente">
+        <section className="w-screen h-screen flex-shrink-0 flex justify-center items-center">
           <Greeting />
         </section>
         <section className="w-screen h-screen flex-shrink-0 flex justify-center items-center">
@@ -101,6 +103,13 @@ function Content() {
         <section className="w-screen h-screen flex-shrink-0 flex justify-center items-center">
           <About />
         </section>
+      </div>
+
+      <div
+        className="pointer-events-none absolute top-0 left-0 w-[50vw] h-[50vh] z-50"
+        style={{ touchAction: "none" }}
+      >
+        <StopMotion />
       </div>
     </div>
   );

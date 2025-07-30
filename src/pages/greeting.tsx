@@ -1,8 +1,9 @@
 import { Separator } from "@radix-ui/react-separator";
+import StopMotion from "@/components/bsod";
 
 function Greeting() {
   return (
-    <div>
+    <>
       <div className="flex min-h-28">
         <Separator
           orientation="vertical"
@@ -10,7 +11,7 @@ function Greeting() {
         />
         <h2 className="font-tenor text-4xl">Hi</h2>
       </div>
-    </div>
+    </>
   );
 }
 
