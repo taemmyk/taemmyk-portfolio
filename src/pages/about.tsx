@@ -1,7 +1,7 @@
 import { Separator } from "@radix-ui/react-separator";
 import { Button } from "@/components/ui/button";
 import avatar from "@/assets/tk-avatar.png";
-import { Send, PhoneOutgoing } from "lucide-react";
+import { Send, PhoneOutgoing, Linkedin, BicepsFlexed } from "lucide-react";
 import { openExternalLink, emailMe, callMe } from "@/lib/utils-link";
 
 function About() {
@@ -26,115 +26,161 @@ function About() {
           </p>
         </div>
         <div className="mt-8 md:mt-0 md:min-h-168 md:w-1/2 flex flex-col justify-around">
-          <div className="text-left font-nunito">
-            <table>
-              <tbody>
-                <tr>
-                  <td className="pr-10 text-sm md:text-md">2013</td>
-                  <td className="text-sm md:text-lg">
-                    Native Thai moved to study in Brisbane
-                  </td>
-                </tr>
-                <tr>
-                  <td className="py-3 md:py-2 text-sm md:text-md">2018</td>
-                  <td className="py-3 md:py-2 text-sm md:text-lg">
-                    Gained UX/UI designer internship experience
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm md:text-md">2019</td>
-                  <td className="text-sm md:text-lg">
-                    Graduated from
-                    <Button
-                      variant="link"
-                      className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
-                      onClick={() =>
-                        openExternalLink(
-                          "https://www.qut.edu.au/courses/bachelor-of-creative-industries"
-                        )
-                      }
-                    >
-                      QUT
-                    </Button>
-                    , Interactive and Visual Design
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm md:text-md">2021</td>
-                  <td className="text-sm md:text-lg">
-                    Self-taught Unity and earned
-                    <Button
-                      variant="link"
-                      className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
-                      onClick={() =>
-                        openExternalLink("https://www.credly.com/users/taemmyk")
-                      }
-                    >
-                      some certs
-                    </Button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm md:text-md">2022</td>
-                  <td className="text-sm md:text-lg">
-                    Started to experiment
-                    <Button
-                      variant="link"
-                      className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
-                      onClick={() =>
-                        openExternalLink("https://www.home-assistant.io/")
-                      }
-                    >
-                      Home Assistant
-                    </Button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="text-sm md:text-md">2025</td>
-                  <td className="text-sm md:text-lg">
-                    Joined a{" "}
-                    <Button
-                      variant="link"
-                      className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
-                      onClick={() =>
-                        openExternalLink(
-                          "https://www.facebook.com/GenerationTH"
-                        )
-                      }
-                    >
-                      Junior Software Developer Bootcamp
-                    </Button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="mt-8 ml-8 md:ml-24 font-tenor">
+          <table className="text-left font-nunito mx-10 md:mx-0">
+            <tbody>
+              <tr>
+                <td className="pr-8 md:pr-10 text-sm md:text-md">2013</td>
+                <td className="text-sm md:text-lg">
+                  Native Thai moved to study in Brisbane
+                </td>
+              </tr>
+              <tr>
+                <td className="py-3 md:py-2 text-sm md:text-md">2018</td>
+                <td className="py-3 md:py-2 text-sm md:text-lg">
+                  Gained UX/UI designer internship experience
+                </td>
+              </tr>
+              <tr>
+                <td className="text-sm md:text-md">2019</td>
+                <td className="text-sm md:text-lg">
+                  Graduated from
+                  <Button
+                    variant="link"
+                    className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
+                    onClick={() =>
+                      openExternalLink(
+                        "https://www.qut.edu.au/courses/bachelor-of-creative-industries"
+                      )
+                    }
+                  >
+                    QUT
+                  </Button>
+                  , Interactive and Visual Design
+                </td>
+              </tr>
+              <tr>
+                <td className="text-sm md:text-md">2021</td>
+                <td className="text-sm md:text-lg">
+                  Self-taught Unity and earned
+                  <Button
+                    variant="link"
+                    className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
+                    onClick={() =>
+                      openExternalLink("https://www.credly.com/users/taemmyk")
+                    }
+                  >
+                    some certs
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <td className="text-sm md:text-md">2022</td>
+                <td className="text-sm md:text-lg">
+                  Started to experiment
+                  <Button
+                    variant="link"
+                    className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
+                    onClick={() =>
+                      openExternalLink("https://www.home-assistant.io/")
+                    }
+                  >
+                    Home Assistant
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <td className="text-sm md:text-md">2025</td>
+                <td className="text-sm md:text-lg">
+                  Joined a{" "}
+                  <Button
+                    variant="link"
+                    className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
+                    onClick={() =>
+                      openExternalLink("https://www.facebook.com/GenerationTH")
+                    }
+                  >
+                    Junior Software Developer Bootcamp
+                  </Button>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td className="text-sm md:text-lg">
+                  <div className="flex items-center gap-2">
+                    and am dedicated to continuous learning
+                    <BicepsFlexed />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div className="mt-8 mx-8 md:ml-24 font-tenor">
             <div className="flex justify-between">
               <Button
                 variant="ghost"
-                className="text-xl hover:bg-transparent"
+                className="text-lg md:text-xl hover:bg-transparent"
                 onClick={emailMe}
               >
                 email
                 <Send />
               </Button>
-              <span className="text-lg md:text-md text-muted-foreground">
+              <Button
+                variant="ghost"
+                className="font-nunito text-md md:text-lg text-muted-foreground hover:text-popover hover:bg-transparent mx-0 px-0"
+                onClick={emailMe}
+              >
                 t.khamiam@gmail.com
-              </span>
+              </Button>
             </div>
             <div className="flex justify-between">
               <Button
                 variant="ghost"
-                className="text-xl hover:bg-transparent"
+                className="text-lg md:text-xl hover:bg-transparent"
                 onClick={callMe}
               >
                 phone
                 <PhoneOutgoing />
               </Button>
-              <span className="font-nunito text-lg md:text-md text-muted-foreground">
+              <Button
+                variant="ghost"
+                className="font-nunito text-md md:text-lg text-muted-foreground hover:text-popover hover:bg-transparent mx-0 px-0"
+                onClick={callMe}
+              >
                 +66 99 218 6997
-              </span>
+              </Button>
+            </div>
+            <div className="flex justify-between">
+              <Button
+                variant="ghost"
+                className="text-lg md:text-xl hover:bg-transparent"
+                onClick={() =>
+                  openExternalLink("https://www.linkedin.com/in/t-khamiam/")
+                }
+              >
+                linkedin
+                <Linkedin />
+              </Button>
+              <Button
+                variant="ghost"
+                className="font-nunito text-md md:text-lg text-muted-foreground hover:text-popover hover:bg-transparent mx-0 px-0"
+                onClick={() =>
+                  openExternalLink("https://www.linkedin.com/in/t-khamiam/")
+                }
+              >
+                https://www.linkedin.com/in/t-khamiam/
+              </Button>
+            </div>
+            <div className="flex justify-between">
+              <span></span>
+              <Button
+                variant="secondary"
+                className="font-nunito text-lg md:text-md text-muted-foreground hover:text-popover"
+                onClick={() =>
+                  openExternalLink("https://www.linkedin.com/in/t-khamiam/")
+                }
+              >
+                resume
+              </Button>
             </div>
           </div>
         </div>
