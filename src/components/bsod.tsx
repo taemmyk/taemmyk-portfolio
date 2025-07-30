@@ -71,16 +71,13 @@ function StopMotion() {
             if (!catRef.current) return;
 
             if (progress < 0.01) {
-              return;
-            }
-
-            if (progress < 0.01) {
               catRef.current.style.opacity = "0";
+              return;
             } else {
               catRef.current.style.opacity = "1";
             }
 
-            if (progress < 0.5) {
+            if (progress < 0.4) {
               const walkLoops = 8;
               const index =
                 Math.floor(progress * walkFrames.length * walkLoops) %
@@ -88,7 +85,7 @@ function StopMotion() {
               catRef.current.setAttribute("src", walkFrames[index]);
             } else if (progress < 0.6) {
               const playLoops = 6;
-              const localProgress = (progress - 0.5) / 0.1;
+              const localProgress = (progress - 0.4) / 0.2;
               const index =
                 Math.floor(localProgress * playFrames.length * playLoops) %
                 playFrames.length;
@@ -124,7 +121,7 @@ function StopMotion() {
           scrollTrigger: {
             trigger: document.body,
             start: 0.05,
-            end: scrollEnd * 0.5,
+            end: scrollEnd * 0.4,
             scrub: true,
           },
         }
@@ -160,7 +157,6 @@ function StopMotion() {
         }
       );
 
-      // bg, bsod
       ScrollTrigger.create({
         trigger: document.body,
         start: scrollEnd * 0.55,
@@ -177,7 +173,6 @@ function StopMotion() {
         },
       });
 
-      // bsod
       ScrollTrigger.create({
         trigger: document.body,
         start: scrollEnd * 0.98,
@@ -186,8 +181,8 @@ function StopMotion() {
         onUpdate: (self) => {
           if (!messageRef.current) return;
 
-          const progress = self.progress; // 0 to 1
-          const scaleValue = 1 - progress; // scale from 1 to 0
+          const progress = self.progress;
+          const scaleValue = 1 - progress;
 
           gsap.to(messageRef.current, {
             scale: scaleValue,
@@ -263,9 +258,9 @@ function StopMotion() {
           userSelect: "none",
           opacity: 0,
         }}
-        className="font-nunito flex flex-col items-start"
+        className="font-nunito"
       >
-        <div className="flex flex-col items-start md:ml-48 lg:ml-64 bg-blue-500/20 backdrop-blur-2xl px-6 md:px-12 lg:px-16 pb-6 rounded-2xl shadow-[0_0_80px_rgba(30,64,175,0.4),0_0_140px_rgba(30,64,175,0.3)] max-w-md w-full mx-auto">
+        <div className="flex flex-col items-start bg-blue-500/20 backdrop-blur-2xl px-6 md:px-12 lg:px-16 pb-6 rounded-2xl shadow-[0_0_80px_rgba(30,64,175,0.4),0_0_140px_rgba(30,64,175,0.3)] max-w-md w-full mx-auto">
           <p className="md:text-5xl text-3xl py-6">:)</p>
 
           <p className="text-base md:text-md text-left leading-relaxed">
