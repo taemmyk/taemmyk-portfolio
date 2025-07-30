@@ -1,5 +1,4 @@
 import { Separator } from "@radix-ui/react-separator";
-import StopMotion from "@/components/bsod";
 
 function Greeting() {
   return (

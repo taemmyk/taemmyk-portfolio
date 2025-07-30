@@ -22,7 +22,7 @@ function articles() {
         <CarouselContent className="-ml-4">
           <CarouselItem className="pl-4">
             <Card className="p-4 border-secondary bg-transparent gap-0 px-4 pb-0 h-full flex flex-col justify-between">
-              <CardHeader className="h-20 md:h-36">
+              <CardHeader className="h-auto min-h-[6rem] sm:min-h-[10rem] md:min-h-[9rem]">
                 <CardTitle>
                   <h3 className="font-tenor md:text-xl text-left text-accent-foreground">
                     ไม่ใช่แค่โค้ด แต่เปลี่ยนความคิด : Junior Software Developer
