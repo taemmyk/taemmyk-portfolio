@@ -1,0 +1,48 @@
+export const projectList = [
+  {
+    title: "LivePoll",
+    description: "Real-time voting app",
+    tags: ["next.js", "WebSocket", "custom server"],
+    repo: "https://github.com/taemmyk/livepoll.git",
+    deployment: "https://livepoll-8hcv.onrender.com/",
+  },
+  {
+    title: "Shopping list",
+    description: "Reminder app",
+    tags: ["ASP.NET", "C#", "MVC", "Python", "Flask", "Selenium"],
+    repo: "https://github.com/taemmyk/shopping-list-scraper.git",
+    repoDef: "python scraper",
+    fullstack: "https://github.com/taemmyk/shopping-list-mvc.git",
+    fullstackDef: "MVC",
+  },
+  {
+    title: "DMS",
+    description: "Document Management System",
+    tags: ["MERN", "FileStream"],
+    frontend: "https://github.com/taemmyk/dms-frontend.git",
+    backend: "https://github.com/taemmyk/dms-backend.git",
+  },
+  {
+    title: "Foundational C#",
+    description: "Basic console app",
+    tags: ["freeCodeCamp.org", "Microsoft Learn"],
+    repo: "https://github.com/taemmyk/freecodecamp-csharp.git",
+    repoDef: "console program",
+  },
+  {
+    title: "Scribbly",
+    description: "Note-taking app",
+    tags: ["MERN", "shadcn", "Cookies"],
+    frontend: "https://github.com/taemmyk/jsd9-mini-project-scribbly-frontend.git",
+    backend: "https://github.com/taemmyk/jsd9-mini-project-scribbly-backend.git",
+    deployment: "https://jsd9-mini-project-scribbly.vercel.app/",
+  },
+  {
+    title: "Cobra",
+    description: "E-commerce",
+    tags: ["MERN", "MUI", "REST", "JWT", "localStorage"],
+    frontend: "https://github.com/taemmyk/jsd9-spicy-cobra-frontend.git",
+    backend: "https://github.com/taemmyk/jsd9-spicy-cobra-backend.git",
+    deployment: "https://jsd9-spicy-cobra-frontend.vercel.app/",
+  },
+];

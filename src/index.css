@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tenor+Sans&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-atma: "Atma", sans-serif;
-  --font-montserrat: "Montserrat", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -47,20 +44,28 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --radius: 0.625rem;
+  --background: #050911;
+  --foreground: oklch(98.081% 0.00917 258.497);
+
+  --card: oklch(15.928% 0.01116 267.992);
+  --card-foreground: oklch(0.98 0.01 260);
+
+  --popover: oklch(60.079% 0.10013 200.099);
+  --popover-foreground: oklch(0.98 0.01 260);
+
+  --primary: oklch(0.35 0.18 260);
+  --primary-foreground: oklch(0.96 0.03 95);
+
+  --secondary: oklch(0.25 0.06 260);
+  --secondary-foreground: oklch(0.98 0.01 260);
+
+  --muted: rgb(18, 27, 41);
+  --muted-foreground: oklch(0.6 0.02 260);
+
+  --accent: oklch(0.60 0.10 200);
+  --accent-foreground: oklch(0.81 0.12 75);
+
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
@@ -80,47 +85,6 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark {
-  --background: oklch(0.6 0.09 80);
-  --foreground: oklch(0.18 0.03 40);
-  --card: oklch(0.62 0.08 80);
-  --card-foreground: oklch(0.18 0.03 40);
-  --popover: oklch(0.6 0.08 80);
-  --popover-foreground: oklch(0.18 0.03 40);
-
-  --primary: oklch(0.38 0.11 45);
-  --primary-foreground: oklch(0.9 0.02 85);
-
-  --secondary: oklch(0.52 0.07 75);
-  --secondary-foreground: oklch(0.18 0.03 40);
-
-  --muted: oklch(0.56 0.05 80);
-  --muted-foreground: oklch(0.3 0.03 50);
-
-  --accent: oklch(0.4 0.07 100);
-  --accent-foreground: oklch(0.15 0.02 40);
-
-  --destructive: oklch(0.45 0.14 35);
-  --border: oklch(0.5 0.05 70);
-  --input: oklch(0.5 0.05 70);
-  --ring: oklch(0.4 0.05 65);
-
-  --chart-1: oklch(0.42 0.08 45);
-  --chart-2: oklch(0.52 0.08 90);
-  --chart-3: oklch(0.58 0.08 70);
-  --chart-4: oklch(0.35 0.08 20);
-  --chart-5: oklch(0.48 0.07 130);
-
-  --sidebar: oklch(0.56 0.07 80);
-  --sidebar-foreground: oklch(0.18 0.03 40);
-  --sidebar-primary: oklch(0.38 0.11 45);
-  --sidebar-primary-foreground: oklch(0.9 0.02 85);
-  --sidebar-accent: oklch(0.48 0.1 100);
-  --sidebar-accent-foreground: oklch(0.18 0.03 40);
-  --sidebar-border: oklch(0.5 0.05 70);
-  --sidebar-ring: oklch(0.4 0.05 65);
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -128,5 +92,21 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@theme {
+  --font-tenor: "Tenor Sans", "Noto Sans Thai", sans-serif;
+  --font-nunito: "Nunito", "Noto Sans Thai", sans-serif;
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
