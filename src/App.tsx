@@ -58,7 +58,7 @@ function App() {
   // Vertical scroll for small screens
   if (!isMdScreen) {
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col overflow-x-hidden">
         <section>
           <Greeting />
         </section>
@@ -82,6 +82,7 @@ function App() {
         overflowX: "hidden",
         overflowY: "hidden",
         position: "relative",
+        maxWidth: "1920px",
       }}
     >
       <div
@@ -90,6 +91,7 @@ function App() {
         style={{
           width: "max-content",
           position: "absolute",
+          maxWidth: "1920px",
           top: 0,
           left: 0,
         }}

@@ -19,34 +19,40 @@ function About() {
             loading="lazy"
             className="max-w-64 max-h-64 md:max-w-96 md:max-h-96"
           />
-          <p className="font-nunito italic text-sm text-center">
+          <p className="font-nunito italic text-sm text-center mx-4">
             ธนัชพร, but <span className="text-accent-foreground">Tammy</span>
             ’s been my go-to for so long, <br />
             even I do a double-take when someone calls me by the full one.
           </p>
         </div>
-        <div className="mt-8 md:mt-0 md:min-h-168 md:w-1/2 flex flex-col justify-around">
-          <table className="text-left font-nunito mx-10 md:mx-0">
+        <div className="w-full mt-8 md:mt-0 md:min-h-168 md:w-1/2 flex flex-col justify-around items-center">
+          <table className="text-left font-nunito mx-6 md:mx-0">
+            <colgroup>
+              <col className="w-10 md:w-20" />
+              <col />
+            </colgroup>
             <tbody>
               <tr>
-                <td className="pr-8 md:pr-10 text-sm md:text-md">2013</td>
-                <td className="text-sm md:text-lg">
+                <td className="text-xs sm:text-sm md:text-lg">2013</td>
+                <td className="text-xs sm:text-sm md:text-lg">
                   Native Thai moved to study in Brisbane
                 </td>
               </tr>
               <tr>
-                <td className="py-3 md:py-2 text-sm md:text-md">2018</td>
-                <td className="py-3 md:py-2 text-sm md:text-lg">
+                <td className="pt-3 md:py-2 text-xs sm:text-sm md:text-lg">
+                  2018
+                </td>
+                <td className="pt-3 md:py-2 text-xs sm:text-sm md:text-lg">
                   Gained UX/UI designer internship experience
                 </td>
               </tr>
               <tr>
-                <td className="text-sm md:text-md">2019</td>
-                <td className="text-sm md:text-lg">
+                <td className="text-xs sm:text-sm md:text-lg">2019</td>
+                <td className="text-xs sm:text-sm md:text-lg">
                   Graduated from
                   <Button
                     variant="link"
-                    className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
+                    className="text-accent font-nunito py-0 px-1 text-xs sm:text-sm md:text-lg"
                     onClick={() =>
                       openExternalLink(
                         "https://www.qut.edu.au/courses/bachelor-of-creative-industries"
@@ -59,12 +65,12 @@ function About() {
                 </td>
               </tr>
               <tr>
-                <td className="text-sm md:text-md">2021</td>
-                <td className="text-sm md:text-lg">
+                <td className="text-xs sm:text-sm md:text-lg">2021</td>
+                <td className="text-xs sm:text-sm md:text-lg">
                   Self-taught Unity and earned
                   <Button
                     variant="link"
-                    className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
+                    className="text-accent font-nunito py-0 px-1 text-xs sm:text-sm md:text-lg"
                     onClick={() =>
                       openExternalLink("https://www.credly.com/users/taemmyk")
                     }
@@ -74,12 +80,12 @@ function About() {
                 </td>
               </tr>
               <tr>
-                <td className="text-sm md:text-md">2022</td>
-                <td className="text-sm md:text-lg">
+                <td className="text-xs sm:text-sm md:text-lg">2022</td>
+                <td className="text-xs sm:text-sm md:text-lg">
                   Started to experiment
                   <Button
                     variant="link"
-                    className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
+                    className="text-accent font-nunito py-0 px-1 text-xs sm:text-sm md:text-lg"
                     onClick={() =>
                       openExternalLink("https://www.home-assistant.io/")
                     }
@@ -89,12 +95,12 @@ function About() {
                 </td>
               </tr>
               <tr>
-                <td className="text-sm md:text-md">2025</td>
-                <td className="text-sm md:text-lg">
+                <td className="text-xs sm:text-sm md:text-lg">2025</td>
+                <td className="text-xs sm:text-sm md:text-lg">
                   Joined a{" "}
                   <Button
                     variant="link"
-                    className="text-accent font-nunito py-0 px-1 text-sm md:text-lg"
+                    className="text-accent font-nunito py-0 px-1 text-xs sm:text-sm md:text-lg"
                     onClick={() =>
                       openExternalLink("https://www.facebook.com/GenerationTH")
                     }
@@ -105,8 +111,8 @@ function About() {
               </tr>
               <tr>
                 <td></td>
-                <td className="text-sm md:text-lg">
-                  <div className="flex items-center gap-2">
+                <td className="text-xs sm:text-sm md:text-lg">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm md:text-lg">
                     and am dedicated to continuous learning
                     <BicepsFlexed />
                   </div>
@@ -114,7 +120,7 @@ function About() {
               </tr>
             </tbody>
           </table>
-          <div className="mt-8 mx-8 md:ml-24 font-tenor">
+          <div className="w-full mt-8 px-8 md:px-0 md:ml-48 font-tenor">
             <div className="flex justify-between">
               <Button
                 variant="ghost"
@@ -167,7 +173,7 @@ function About() {
                   openExternalLink("https://www.linkedin.com/in/t-khamiam/")
                 }
               >
-                https://www.linkedin.com/in/t-khamiam/
+                @t-khamiam
               </Button>
             </div>
             <div className="flex justify-between">

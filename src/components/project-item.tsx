@@ -32,12 +32,12 @@ function ProjectItem({
 }: ProjectItemProps) {
   return (
     <div className="py-4">
-      <div className="flex justify-between px-2 md:px-4">
+      <div className="flex flex-col md:flex-row justify-between md:px-4">
         <h3 className="font-tenor text-2xl text-accent-foreground">
           <span className="hidden md:inline-block mr-10">
             {index !== undefined ? String(index + 1).padStart(2, "0") : ""}
           </span>
-          {title}
+          <span className="ml-2 md:ml-0">{title}</span>
         </h3>
         <div className="flex items-center h-full">
           {repo && (
@@ -91,7 +91,7 @@ function ProjectItem({
         </div>
       </div>
       <Separator className="bg-secondary h-px my-2 md:ml-18" />
-      <div className="flex px-2 md:ml-18 md:px-4 h-full md:space-x-2 items-center">
+      <div className="flex flex-col md:flex-row px-2 md:ml-18 md:px-4 h-full md:space-x-2 items-start md:items-center">
         <span className="font-nunito text-sm md:text-md text-muted-foreground">
           {description}
         </span>
@@ -99,7 +99,7 @@ function ProjectItem({
           <>
             <Separator
               orientation="vertical"
-              className="w-px md:w-0.5 h-6 bg-secondary mx-2 md:ml-0"
+              className="hidden md:block w-px md:w-0.5 h-6 bg-secondary mx-2 md:ml-0"
             />
             <div className="flex gap-2 items-center">
               {tags.map((tag, index) => (
@@ -108,6 +108,7 @@ function ProjectItem({
                   className="font-tenor text-xs md:text-sm text-muted-foreground"
                 >
                   {tag}
+                  {index < tags.length - 1 && ","}
                 </span>
               ))}
             </div>
