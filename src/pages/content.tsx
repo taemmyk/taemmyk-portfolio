@@ -59,7 +59,7 @@ function Content() {
   if (!isMdScreen) {
     return (
       <div className="flex flex-col">
-        <section className="min-h-screen">
+        <section>
           <Greeting />
         </section>
         <section className="min-h-screen">
@@ -75,15 +75,15 @@ function Content() {
   // 💻 Horizontal scroll for desktop
   return (
     <div
-    ref={outerRef}
-    className="hide-scrollbar"
-    style={{
-      height: "100vh",
-      overflowX: "hidden",
-      overflowY: "hidden",
-      position: "relative",
-    }}
-  >
+      ref={outerRef}
+      className="hide-scrollbar"
+      style={{
+        height: "100vh",
+        overflowX: "hidden",
+        overflowY: "hidden",
+        position: "relative",
+      }}
+    >
       <div
         ref={containerRef}
         className="flex h-screen"

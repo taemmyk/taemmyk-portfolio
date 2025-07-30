@@ -1,14 +1,12 @@
-import { Separator } from "@radix-ui/react-separator";
-
 function Greeting() {
   return (
     <>
-      <div className="flex min-h-28">
-        <Separator
-          orientation="vertical"
-          className="w-px md:w-0.5 bg-secondary mr-2 md:mr-4"
-        />
-        <h2 className="font-tenor text-4xl">Hi</h2>
+      <div className="w-full h-full flex items-center ">
+        <p className="font-tenor text-[clamp(0.8rem,4vw,2rem)] mx-4 mr-64 p-4 bg-popover text-popover-foreground">
+          Curious developer who loves building, learning, and occasionally
+          breaking thing <br />
+          <span className="italic">(on purpose, I promise)</span>.
+        </p>
       </div>
     </>
   );
