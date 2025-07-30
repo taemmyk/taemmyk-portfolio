@@ -16,7 +16,7 @@ function Projects() {
           Play
         </h2>
       </div>
-      <div className="md:h-10/12 flex flex-col md:flex-row md:space-x-32 mx-12">
+      <div className="md:h-10/12 flex flex-col md:flex-row md:space-x-32 mx-8 md:mx-12">
         <div className="md:w-1/3 order-2 md:order-1 self-auto md:self-end my-12 md:m-16">
           <Articles />
         </div>

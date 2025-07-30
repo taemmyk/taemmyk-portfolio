@@ -37,10 +37,10 @@ function articles() {
                 <Separator className="bg-secondary h-px" />
               </CardHeader>
               <CardFooter className="flex items-center h-10">
-                <span className="font-nunito">2 min read</span>
+                <span className="font-nunito hidden md:block">2 min read</span>
                 <Separator
                   orientation="vertical"
-                  className="w-px md:w-0.5 h-6 bg-secondary mx-2"
+                  className="hidden md:block w-px md:w-0.5 h-6 bg-secondary mx-2"
                 />
                 <span className="font-nunito">ภาษาไทย on</span>
                 <Button

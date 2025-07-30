@@ -58,7 +58,7 @@ function App() {
   // Vertical scroll for small screens
   if (!isMdScreen) {
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col overflow-x-hidden">
         <section>
           <Greeting />
         </section>
