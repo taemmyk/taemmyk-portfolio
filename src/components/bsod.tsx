@@ -180,7 +180,7 @@ function StopMotion() {
       // bsod
       ScrollTrigger.create({
         trigger: document.body,
-        start: scrollEnd * 0.8,
+        start: scrollEnd * 0.98,
         end: scrollEnd,
         scrub: true,
         onUpdate: (self) => {

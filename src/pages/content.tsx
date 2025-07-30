@@ -65,7 +65,7 @@ function Content() {
         <section className="min-h-screen">
           <Projects />
         </section>
-        <section className="pb-16 mt-32">
+        <section className="pb-16">
           <About />
         </section>
       </div>
