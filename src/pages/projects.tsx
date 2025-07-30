@@ -1,7 +1,7 @@
 import ProjectItem from "@/components/project-item";
 import { Separator } from "@radix-ui/react-separator";
 import Articles from "@/components/articles-carousel";
-import { projectList } from "@/data/projects";
+import { projectList } from "@/data/projects-list";
 
 function Projects() {
   return (
