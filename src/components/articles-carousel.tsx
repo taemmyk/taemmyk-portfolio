@@ -58,29 +58,45 @@ function articles() {
               </CardFooter>
             </Card>
           </CarouselItem>
-
+          
           <CarouselItem className="pl-4">
             <Card className="p-4 border-secondary bg-transparent gap-0 px-4 pb-0 h-full flex flex-col justify-between">
-              <CardHeader className="h-20 md:h-36">
+              <CardHeader className="h-auto min-h-[6rem] sm:min-h-[10rem] md:min-h-[9rem]">
                 <CardTitle>
                   <h3 className="font-tenor md:text-xl text-left text-accent-foreground">
-                    สู่ smart home ในฝัน
+                    สู่ Smart Home ในฝัน: ของบางอย่าง “สมาร์ท” เพื่อเราจริง ๆ
                   </h3>
                 </CardTitle>
                 <CardDescription>
                   <p className="font-tenor text-left">
-                    จาก spin9arm – EP25: ของบางอย่าง สมาร์ทไปเพื่ออะไร
+                    จาก spin9arm — EP25: ของบางอย่าง สมาร์ทไปเพื่ออะไร (01.07.2025)
                   </p>
                 </CardDescription>
                 <Separator className="bg-secondary h-px" />
               </CardHeader>
               <CardFooter className="flex items-center h-10">
-                <p className="font-nunito">
-                  Scheduled to publish on mid August
-                </p>
+                <span className="font-nunito hidden md:block">2 min read</span>
+                <Separator
+                  orientation="vertical"
+                  className="hidden md:block w-px md:w-0.5 h-6 bg-secondary mx-2"
+                />
+                <span className="font-nunito">ภาษาไทย on</span>
+                <Button
+                  variant="link"
+                  className="font-tenor text-accent hover:text-accent-foreground py-0 px-2"
+                  onClick={() =>
+                    window.open(
+                      "https://medium.com/@taemmyk/สู่-smart-home-ในฝัน-ของบางอย่าง-สมาร์ท-เพื่อเราจริง-ๆ-1b017c6a5201",
+                      "_blank"
+                    )
+                  }
+                >
+                  Medium
+                </Button>
               </CardFooter>
             </Card>
           </CarouselItem>
+\
         </CarouselContent>
 
         <CarouselPrevious className="absolute left-1 top-1/2 -translate-y-1/2 z-10 border-0 hover:bg-transparent hover:text-accent-foreground" />
