@@ -182,7 +182,7 @@ function About() {
                 variant="secondary"
                 className="font-nunito text-lg md:text-md text-muted-foreground hover:text-popover"
                 onClick={() =>
-                  openExternalLink("https://drive.google.com/file/d/1EA2g8zjeudl5YFsMQ1EzhPlwZMzaBfHm/view?usp=sharing")
+                  openExternalLink("https://drive.google.com/file/d/18AccUQrWwucHrWJdSF33VbYdtwEvS7U3/view?usp=sharing")
                 }
               >
                 resume

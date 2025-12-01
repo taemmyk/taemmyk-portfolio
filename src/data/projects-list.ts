@@ -19,8 +19,8 @@ export const projectList = [
     title: "DMS",
     description: "Document Management System",
     tags: ["MERN", "FileStream"],
-    frontend: "https://github.com/taemmyk/dms-frontend.git",
-    backend: "https://github.com/taemmyk/dms-backend.git",
+    frontend: "https://github.com/taemmyk/cleanedge-dms-frontend.git",
+    backend: "https://github.com/taemmyk/cleanedge-dms-backend.git",
   },
   {
     title: "Foundational C#",
